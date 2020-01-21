@@ -1,0 +1,17 @@
+#HeaderComponent {
+  background: #002f5f;
+}
+#HeaderComponent nav .navbar-brand {
+  color: #aefdff;
+  text-shadow: 1px 1px 3px #001b37;
+}
+#HeaderComponent nav a {
+  transition: all ease 0.3s;
+  color: #eee;
+  border: 2px solid transparent;
+}
+#HeaderComponent nav a:hover {
+  color: #aefdff;
+  text-decoration: none;
+  border-color: #aefdff;
+}

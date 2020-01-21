@@ -1,9 +1,17 @@
 import React from 'react';
+import {Container, Row, Col} from "react-bootstrap";
 
-const FooterComponent = () =>{
-    return(
+
+const FooterComponent = () => {
+    return (
         <div id={'FooterComponent'}>
-            footer
+            <Container>
+                <Row>
+                    <Col xs={12}>
+                        test project to train react redux and formik | created by <a href={'https://iwonalalak.pl'}>Iwona Lalak</a>
+                    </Col>
+                </Row>
+            </Container>
         </div>
     )
 }

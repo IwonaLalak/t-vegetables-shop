@@ -1,0 +1,18 @@
+#FooterComponent {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  background: #002f5f;
+  text-align: center;
+  font-size: 12px;
+  padding: 5px 0;
+  color: #eee;
+}
+#FooterComponent a {
+  color: #eee;
+  transition: all ease 0.3s;
+}
+#FooterComponent a:hover {
+  color: #aefdff;
+  text-decoration: none;
+}

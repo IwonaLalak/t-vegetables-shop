@@ -4,6 +4,10 @@ import getVegetables from "./_database/db";
 import HeaderComponent from "./components/LayoutComponents/HeaderComponent";
 import WrapperComponent from "./components/LayoutComponents/WrapperComponent";
 import FooterComponent from "./components/LayoutComponents/FooterComponent";
+import HomeView from "./views/HomeView/HomeView";
+import BasketView from "./views/BasketView/BasketView";
+import ManageView from "./views/ManageView/ManageView";
+import {BrowserRouter as Router, Redirect, Route, Switch} from "react-router-dom";
 
 class App extends Component {
 
@@ -16,14 +20,18 @@ class App extends Component {
     render() {
         return (
             <div className="App">
-                <HeaderComponent/>
-                <WrapperComponent>
-
-                    <div>
-                        aaaa
-                    </div>
-                </WrapperComponent>
-                <FooterComponent/>
+                <Router>
+                    <HeaderComponent/>
+                    <WrapperComponent>
+                        <Switch>
+                            <Route exact path={'/'} render={(props) => <HomeView {...props} />}/>
+                            <Route exact path={'/basket'} render={(props) => <BasketView {...props} />}/>
+                            <Route exact path={'/manage'} render={(props) => <ManageView {...props} />}/>
+                            <Redirect to={'/'}/>
+                        </Switch>
+                    </WrapperComponent>
+                    <FooterComponent/>
+                </Router>
             </div>
         );
     }

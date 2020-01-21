@@ -1,4 +1,42 @@
 .App {
-  background: #d8e8f5;
+  background: #deeefb;
   min-height: 100vh;
+}
+#HeaderComponent {
+  background: #002f5f;
+}
+#HeaderComponent nav .navbar-brand {
+  color: #aefdff;
+  text-shadow: 1px 1px 3px #001b37;
+}
+#HeaderComponent nav a {
+  transition: all ease 0.3s;
+  color: #eee;
+  border: 2px solid transparent;
+}
+#HeaderComponent nav a:hover {
+  color: #aefdff;
+  text-decoration: none;
+  border-color: #aefdff;
+}
+#WrapperComponent {
+  padding: 25px 0;
+}
+#FooterComponent {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  background: #002f5f;
+  text-align: center;
+  font-size: 12px;
+  padding: 5px 0;
+  color: #eee;
+}
+#FooterComponent a {
+  color: #eee;
+  transition: all ease 0.3s;
+}
+#FooterComponent a:hover {
+  color: #aefdff;
+  text-decoration: none;
 }
