@@ -1,5 +1,7 @@
 #HeaderComponent {
   background: #002f5f;
+  position: fixed;
+  width: 100%;
 }
 #HeaderComponent nav .navbar-brand {
   color: #aefdff;
@@ -8,10 +10,14 @@
 #HeaderComponent nav a {
   transition: all ease 0.3s;
   color: #eee;
-  border: 2px solid transparent;
 }
 #HeaderComponent nav a:hover {
   color: #aefdff;
   text-decoration: none;
+}
+#HeaderComponent nav a.nav-link {
+  border: 2px solid transparent;
+}
+#HeaderComponent nav a.nav-link:hover {
   border-color: #aefdff;
 }

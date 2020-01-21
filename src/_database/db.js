@@ -1,4 +1,4 @@
-const getVegetables = () => [
+const getVegetablesFromLocalDB = () => [
     {
         id: 1,
         name: 'Carrots',
@@ -89,4 +89,4 @@ const getVegetables = () => [
     }
 ]
 
-export default getVegetables();
+export default getVegetablesFromLocalDB;

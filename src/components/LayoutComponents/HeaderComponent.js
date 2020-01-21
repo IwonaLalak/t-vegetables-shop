@@ -1,6 +1,7 @@
 import React from 'react';
 import {Nav, Navbar, Container, Row, Col} from "react-bootstrap";
 import {Basket, Home, Panel} from "../../_utilities/icons/FontAwesome";
+import {Link} from "react-router-dom";
 
 
 const HeaderComponent = (props) => {
@@ -17,9 +18,20 @@ const HeaderComponent = (props) => {
                             <Navbar.Toggle aria-controls="basic-navbar-nav"/>
                             <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
                                 <Nav className="mr-right">
-                                    <Nav.Link><Home/> Home</Nav.Link>
-                                    <Nav.Link><Basket/> Basket</Nav.Link>
-                                    <Nav.Link><Panel/> Panel</Nav.Link>
+                                    <Nav.Link>
+                                        <Link to={'/'}>
+                                            <Home/> Home
+                                        </Link>
+                                    </Nav.Link>
+                                    <Nav.Link>
+                                        <Link to={'/basket'}>
+                                            <Basket/> Basket</Link>
+                                    </Nav.Link>
+                                    <Nav.Link>
+                                        <Link to={'/manage'}>
+                                        <Panel/> Panel
+                                        </Link>
+                                    </Nav.Link>
                                 </Nav>
                             </Navbar.Collapse>
                         </Navbar>
