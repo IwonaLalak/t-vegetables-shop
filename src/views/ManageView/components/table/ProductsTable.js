@@ -1,12 +1,9 @@
 import React from 'react';
-import ProductsTableRow from './ProductsTableRow';
 import {Table} from "react-bootstrap";
-
-const Row = ProductsTableRow;
 
 const ProductsTable = ({children}) => {
     return (
-        <Table striped bordered hover>
+        <Table striped hover>
             <thead>
             <tr>
                 <th>IMG</th>

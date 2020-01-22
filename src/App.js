@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 import './styles/_imports.css';
-import HeaderComponent from "./components/LayoutComponents/HeaderComponent";
-import WrapperComponent from "./components/LayoutComponents/WrapperComponent";
-import FooterComponent from "./components/LayoutComponents/FooterComponent";
+import HeaderComponent from "./shared/LayoutComponents/HeaderComponent";
+import WrapperComponent from "./shared/LayoutComponents/WrapperComponent";
+import FooterComponent from "./shared/LayoutComponents/FooterComponent";
 import HomeView from "./views/HomeView/HomeView";
 import BasketView from "./views/BasketView/BasketView";
 import ManageView from "./views/ManageView/ManageView";

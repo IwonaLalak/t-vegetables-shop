@@ -1,5 +1,7 @@
 import React, {Component} from 'react'
 import getVegetables from "../../_database/api";
+import ProductsTable from "./components/table/ProductsTable";
+import ProductsTableRow from "./components/table/ProductsTableRow";
 
 export default class ManageView extends React.Component {
 
@@ -17,11 +19,18 @@ export default class ManageView extends React.Component {
     }
 
     render() {
+
+        let {products} = this.state;
+
         return (
             <div id={'ManageView'}>
-                {
-                    this.state.products.map(item=>(<p>{item.name}</p>))
-                }
+                <ProductsTable>
+                    {
+                        products.map(item=>(
+                            <ProductsTableRow item={item} />
+                        ))
+                    }
+                </ProductsTable>
             </div>
         )
     }
