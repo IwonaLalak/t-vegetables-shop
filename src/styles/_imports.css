@@ -1,32 +1,55 @@
+@font-face {
+  font-family: 'ZCOOL QingKe HuangYou';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('ZCOOL QingKe HuangYou Regular'), local('ZCOOLQingKeHuangYou-Regular'), url(https://fonts.gstatic.com/s/zcoolqingkehuangyou/v5/2Eb5L_R5IXJEWhD3AOhSvFC554MOOahI4mR4jPe4.ttf) format('truetype');
+}
 .App {
   background: #deeefb;
   min-height: 100vh;
+}
+.App * {
+  font-family: 'ZCOOL QingKe HuangYou', cursive, sans-serif;
 }
 #HeaderComponent {
   background: #002f5f;
   position: fixed;
   width: 100%;
+  z-index: 9999;
 }
 #HeaderComponent nav .navbar-brand {
-  color: #aefdff;
+  color: #dbff9a;
+  font-size: 24px;
   text-shadow: 1px 1px 3px #001b37;
 }
 #HeaderComponent nav a {
   transition: all ease 0.3s;
   color: #eee;
+  font-size: 18px;
 }
 #HeaderComponent nav a:hover {
-  color: #aefdff;
+  color: #dbff9a;
   text-decoration: none;
 }
-#HeaderComponent nav a.nav-link {
-  border: 2px solid transparent;
-}
 #HeaderComponent nav a.nav-link:hover {
-  border-color: #aefdff;
+  background-color: rgba(0, 0, 0, 0.2);
 }
 #WrapperComponent {
-  padding: 85px 0 25px 0;
+  padding: 75px 0 25px 0;
+}
+#WrapperComponent ol.breadcrumb {
+  background: none;
+  border-radius: 0;
+  padding-left: 0;
+  padding-top: 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+#WrapperComponent ol.breadcrumb li a {
+  color: rgba(0, 0, 0, 0.3);
+}
+#WrapperComponent ol.breadcrumb li:last-of-type a {
+  color: #002f5f;
 }
 #FooterComponent {
   position: fixed;
@@ -43,6 +66,6 @@
   transition: all ease 0.3s;
 }
 #FooterComponent a:hover {
-  color: #aefdff;
+  color: #dbff9a;
   text-decoration: none;
 }

@@ -15,3 +15,4 @@ const getVegetables = () => {
 }
 
 export default getVegetables;
+

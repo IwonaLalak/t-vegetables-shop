@@ -4,25 +4,29 @@
   background: @bg-color-nav;
   position: fixed;
   width: 100%;
+  z-index: 9999;
+
   nav {
     .navbar-brand {
       color: @secondary-color;
-      text-shadow:1px 1px 3px @primary-color-darkest;
+      font-size: 24px;
+      text-shadow: 1px 1px 3px @primary-color-darkest;
     }
-    a{
+
+    a {
       transition: all ease 0.3s;
       color: @font-color-nav;
-      &:hover{
+      font-size: 18px;
+
+      &:hover {
         color: @font-color-nav-secondary;
         text-decoration: none;
       }
     }
 
     a.nav-link {
-      border: 2px solid transparent;
-    //  border-radius:3px;
       &:hover {
-        border-color:@font-color-nav-secondary;
+        background-color: rgba(0, 0, 0, 0.2)
       }
     }
 
