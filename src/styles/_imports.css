@@ -12,6 +12,10 @@
 .App * {
   font-family: 'ZCOOL QingKe HuangYou', cursive, sans-serif;
 }
+.clearfix {
+  clear: both;
+  content: ' ';
+}
 .btn {
   border-radius: 0;
 }
@@ -80,6 +84,32 @@
 }
 .btn-toolbar .btn:last-of-type {
   margin-right: 0;
+}
+table {
+  background: rgba(255, 255, 255, 0.5);
+  padding: 15px;
+  margin-top: 15px;
+}
+form {
+  background: rgba(255, 255, 255, 0.5);
+  padding: 15px;
+}
+form label.form-label span {
+  display: inline-block;
+}
+form label.form-label span:nth-of-type(2) {
+  color: rgba(203, 19, 47, 0.8);
+  font-style: italic;
+  font-weight: normal;
+  margin-left: 5px;
+  font-size: 14px;
+}
+form .form-control {
+  border-radius: 0;
+}
+form .form-control.inp-err {
+  border-color: rgba(203, 19, 47, 0.5);
+  box-shadow: 0 0 0 0.1rem rgba(203, 19, 47, 0.3);
 }
 #HeaderComponent {
   background: #002f5f;

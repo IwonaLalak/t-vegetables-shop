@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {Button, ButtonToolbar} from "react-bootstrap";
-import {Delete, Edit} from "../../_utilities/icons/FontAwesome";
+import {Delete, Edit, Save, Times} from "../../_utilities/icons/FontAwesome";
 
 export const ActionButton = props => {
     let {icon, text, theme, size, type, disabled, onClick} = props;
@@ -86,6 +86,57 @@ EditDeleteButtonGroup.propTypes = {
 };
 
 EditDeleteButtonGroup.defaultProps = {
+    visibleIcons: true,
+    visibleText: true,
+    size: '',
+    disabled: false,
+};
+
+
+export const SaveCancelButtonGroup = props => {
+    let {visibleIcons, visibleText, size, disabled, onClickCancel, onClickSave} = props;
+    return (
+        <ButtonToolbar>
+            <Button onClick={onClickCancel}
+                    size={size}
+                    disabled={disabled}
+                    variant={'light'}
+                    type={'button'}
+            >
+                {
+                    visibleIcons && <span style={visibleText ? {marginRight: '5px'} : {}}><Times/></span>
+                }
+                {
+                    visibleText && <span>Cancel</span>
+                }
+            </Button>
+            <Button onClick={onClickSave}
+                    size={size}
+                    disabled={disabled}
+                    variant={'primary'}
+                    type={'submit'}
+            >
+                {
+                    visibleIcons && <span style={visibleText ? {marginRight: '5px'} : {}}><Save/></span>
+                }
+                {
+                    visibleText && <span>Save</span>
+                }
+            </Button>
+        </ButtonToolbar>
+    )
+};
+
+SaveCancelButtonGroup.propTypes = {
+    visibleIcons: PropTypes.bool,
+    visibleText: PropTypes.bool,
+    size: PropTypes.oneOf(['sm', 'lg']),
+    disabled: PropTypes.bool,
+    onClickCancel: PropTypes.func,
+    onClickSave: PropTypes.func
+};
+
+SaveCancelButtonGroup.defaultProps = {
     visibleIcons: true,
     visibleText: true,
     size: '',

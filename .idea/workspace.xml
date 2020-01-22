@@ -1,29 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f2dcb656-23ba-4ecb-aa56-370cb7af6755" name="Default" comment="css stuff, breadcrumbs">
-      <change afterPath="$PROJECT_DIR$/src/shared/Buttons/Buttons.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/components/ManageView.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/components/ManageView.less" afterDir="false" />
+    <list default="true" id="f2dcb656-23ba-4ecb-aa56-370cb7af6755" name="Default" comment="table">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/_utilities/icons/FontAwesome.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/_utilities/icons/FontAwesome.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Breadcrumbs/Breadcrumbs.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/shared/Breadcrumbs/Breadcrumbs.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/LayoutComponents/FooterComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/shared/LayoutComponents/FooterComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/LayoutComponents/HeaderComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/shared/LayoutComponents/HeaderComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/LayoutComponents/WrapperComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/shared/LayoutComponents/WrapperComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/shared/Buttons/Buttons.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/shared/Buttons/Buttons.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/styles/_imports.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/_imports.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/_imports.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/_imports.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/_variables.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/_variables.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/_variables.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/_variables.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/components/FooterComponent.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/components/FooterComponent.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/components/HeaderComponent.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/components/HeaderComponent.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/components/WrapperComponent.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/components/WrapperComponent.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/styles/general.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/general.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/styles/general.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/general.less" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/ManageView/ManageView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/ManageView/ManageView.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/ManageView/components/table/ProductsTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/ManageView/components/table/ProductsTable.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/ManageView/components/table/ProductsTableRow.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/ManageView/components/table/ProductsTableRow.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,7 +92,7 @@
       <workItem from="1579679640988" duration="9000" />
       <workItem from="1579679747471" duration="5000" />
       <workItem from="1579679775449" duration="3000" />
-      <workItem from="1579679953037" duration="10851000" />
+      <workItem from="1579679953037" duration="18870000" />
     </task>
     <task id="LOCAL-00001" summary="wrapper, footer">
       <created>1579528309136</created>
@@ -135,7 +122,14 @@
       <option name="project" value="LOCAL" />
       <updated>1579686060848</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="table">
+      <created>1579696184383</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1579696184383</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -146,24 +140,29 @@
     <MESSAGE value="views" />
     <MESSAGE value="stufff" />
     <MESSAGE value="css stuff, breadcrumbs" />
-    <option name="LAST_COMMIT_MESSAGE" value="css stuff, breadcrumbs" />
+    <MESSAGE value="table" />
+    <option name="LAST_COMMIT_MESSAGE" value="table" />
   </component>
   <component name="WindowStateProjectService">
     <state x="712" y="218" width="476" height="621" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1579688024470">
       <screen x="0" y="0" width="1920" height="1037" />
     </state>
     <state x="712" y="218" width="476" height="621" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1037/1920.0.1920.1080@0.0.1920.1037" timestamp="1579688024470" />
-    <state x="595" y="116" width="720" height="815" key="CommitChangelistDialog2" timestamp="1579686060696">
+    <state x="595" y="116" width="720" height="815" key="CommitChangelistDialog2" timestamp="1579696184297">
       <screen x="0" y="0" width="1920" height="1037" />
     </state>
-    <state x="595" y="116" width="720" height="815" key="CommitChangelistDialog2/0.0.1920.1037/1920.0.1920.1080@0.0.1920.1037" timestamp="1579686060696" />
+    <state x="595" y="116" width="720" height="815" key="CommitChangelistDialog2/0.0.1920.1037/1920.0.1920.1080@0.0.1920.1037" timestamp="1579696184297" />
     <state x="543" y="256" width="824" height="535" key="IDE.errors.dialog" timestamp="1579686581368">
       <screen x="0" y="0" width="1920" height="1037" />
     </state>
     <state x="543" y="256" width="824" height="535" key="IDE.errors.dialog/0.0.1920.1037/1920.0.1920.1080@0.0.1920.1037" timestamp="1579686581368" />
-    <state x="555" y="254" width="800" height="538" key="Vcs.Push.Dialog.v2" timestamp="1579686061971">
+    <state x="555" y="254" width="800" height="538" key="Vcs.Push.Dialog.v2" timestamp="1579696185858">
       <screen x="0" y="0" width="1920" height="1037" />
     </state>
-    <state x="555" y="254" width="800" height="538" key="Vcs.Push.Dialog.v2/0.0.1920.1037/1920.0.1920.1080@0.0.1920.1037" timestamp="1579686061971" />
+    <state x="555" y="254" width="800" height="538" key="Vcs.Push.Dialog.v2/0.0.1920.1037/1920.0.1920.1080@0.0.1920.1037" timestamp="1579696185858" />
+    <state x="623" y="228" width="672" height="678" key="search.everywhere.popup" timestamp="1579702789078">
+      <screen x="0" y="0" width="1920" height="1037" />
+    </state>
+    <state x="623" y="228" width="672" height="678" key="search.everywhere.popup/0.0.1920.1037/1920.0.1920.1080@0.0.1920.1037" timestamp="1579702789078" />
   </component>
 </project>
