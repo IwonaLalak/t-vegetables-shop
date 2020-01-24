@@ -4,8 +4,8 @@ import {EditDeleteButtonGroup} from "../../../../shared/Buttons/Buttons";
 
 class ProductsTableRow extends Component {
 
-    onClickEdit = () => {
-
+    onClickEdit = (item) => {
+        this.props.handleEdit(item)
     }
 
     onClickDelete = () => {
@@ -31,8 +31,8 @@ class ProductsTableRow extends Component {
                 {item.per}
             </td>
             <td>
-                <EditDeleteButtonGroup onClickDelete={this.onClickEdit}
-                                       onClickEdit={this.onClickDelete}
+                <EditDeleteButtonGroup onClickEdit={()=>this.onClickEdit(item)}
+                                       onClickDelete={this.onClickDelete}
                                        size={'sm'}
                                        visibleText={false}
                 />

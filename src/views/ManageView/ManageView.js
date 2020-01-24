@@ -10,7 +10,8 @@ export default class ManageView extends React.Component {
 
     state = {
         products: [],
-        showForm: true
+        product: {name: '', url: '', price: '', per: 'kg'},
+        showForm: false,
     }
 
     componentDidMount() {
@@ -32,9 +33,13 @@ export default class ManageView extends React.Component {
         this.setState({showForm: false})
     }
 
+    onClickEdit = (product) => {
+        this.setState({product: product, showForm: true});
+    }
+
     render() {
 
-        let {products, showForm} = this.state;
+        let {products, product,showForm} = this.state;
 
         return (
             <div id={'ManageView'}>
@@ -42,14 +47,15 @@ export default class ManageView extends React.Component {
                     {
                         showForm ?
                             <ProductForm
+                                product={product}
                                 handleCancel={this.onClickCancel}
                             />
                             :
                             <>
-                            <div className={'float-right'}>
-                                <ActionButton theme={'success'} text={'Add new'} type={'button'}
-                                              onClick={this.onClickAdd} size={'sm'} icon={<Plus/>}/>
-                            </div>
+                                <div className={'float-right'}>
+                                    <ActionButton theme={'success'} text={'Add new'} type={'button'}
+                                                  onClick={this.onClickAdd} size={'sm'} icon={<Plus/>}/>
+                                </div>
                                 <div className={'clearfix'}></div>
                             </>
 
@@ -58,7 +64,7 @@ export default class ManageView extends React.Component {
                 <ProductsTable>
                     {
                         products.map(item => (
-                            <ProductsTableRow item={item}/>
+                            <ProductsTableRow item={item} handleEdit={this.onClickEdit}/>
                         ))
                     }
                 </ProductsTable>

@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {Formik} from "formik";
-import {Col, Form, FormGroup, Row} from "react-bootstrap";
+import {Col, Form, FormControl, FormGroup, Row} from "react-bootstrap";
 import {SaveCancelButtonGroup} from "../../../../shared/Buttons/Buttons";
 import {formVegetableSchema, urlSchema} from "../../../../_utilities/validators/YupValidators";
 import Formfield from "../../../../shared/Forms/Formfield";
@@ -10,10 +10,48 @@ import ImageField from "./ImageField";
 
 class ProductForm extends Component {
 
-    state = {
-        product: {name: '', url: '', price: '', per: 'kg'},
-        url: null
+    constructor(props) {
+        super(props);
+        this.state = {
+            product: this.props.product,
+            url: null
+        }
     }
+
+/*    componentWillReceiveProps(nextProps, nextContext) {
+        console.log('will receive',nextProps)
+        this.setState({
+            product:nextProps.product
+        })
+    }*/
+
+    /*componentDidMount() {
+        console.log('mount')
+        console.log(this.props)
+        if(Boolean(this.props.productToEdit)){
+            console.log('set product')
+            this.setState({
+                product:this.props.productToEdit
+            })
+        }
+    }*/
+
+    static getDerivedStateFromProps(props,currentState){
+        console.log('derived')
+        console.log(props,currentState)
+        if(currentState.product !== props.product){
+            console.log('retur product')
+            return{
+                product:props.product
+            }
+        }
+        else return null;
+    }
+
+    /*componentDidUpdate(prevProps, prevState, snapshot) {
+        console.log('update')
+        console.log(prevProps,prevState)
+    }*/
 
     onSubmit = (values, actions) => {
         console.log(values, actions)
@@ -36,8 +74,11 @@ class ProductForm extends Component {
 
         return (
             <div>
+                <button type={'button'} onClick={()=>console.log(this.state)}>state</button>
+                <FormControl value={product.name} />
                 <Formik
                     initialValues={product}
+                    enableReinitialize={true}
                     validationSchema={validationSchema}
                     onSubmit={this.onSubmit}
                 >

@@ -17,19 +17,6 @@ class ImageField extends React.Component {
         }
     }
 
-    /*static getDerivedStateFromProps(props, state) {
-
-    console.log('derived ', props, state)
-        if (props.url !== state.prevUrl) {
-            console.log('different')
-            return{
-                prevUrl: props.url,
-                loading:true
-            }
-        }
-        return null
-    }*/
-
     disableLoading = () => {
         this.setState({
             prevUrl: this.props.url
