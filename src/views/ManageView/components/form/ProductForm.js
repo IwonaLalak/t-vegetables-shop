@@ -6,11 +6,13 @@ import {formVegetableSchema, urlSchema} from "../../../../_utilities/validators/
 import Formfield from "../../../../shared/Forms/Formfield";
 import {perOptions} from "../../../../_utilities/constvalues/constoptions";
 import Formselect from "../../../../shared/Forms/Formselect";
+import ImageField from "./ImageField";
 
 class ProductForm extends Component {
 
     state = {
-        product: {name: '', url: '', price: '', per: 'kg'}
+        product: {name: '', url: '', price: '', per: 'kg'},
+        url: null
     }
 
     onSubmit = (values, actions) => {
@@ -20,17 +22,15 @@ class ProductForm extends Component {
     onChangeForm = ({target}) => {
 
         if (target.id === 'url') {
-            console.log('odswiezenie wartosci img - ', target.value)
-
             urlSchema().isValid(target.value).then((valid => {
-                console.log(valid)
+                this.setState({url: valid? target.value:null})
             }))
 
         }
     }
 
     render() {
-        let {product} = this.state;
+        let {product, url} = this.state;
 
         const validationSchema = formVegetableSchema();
 
@@ -50,7 +50,7 @@ class ProductForm extends Component {
                                 <Row>
                                     <Col lg={3}>
                                         <FormGroup>
-                                            image
+                                            <ImageField url={url}/>
                                         </FormGroup>
                                     </Col>
                                     <Col lg={9}>

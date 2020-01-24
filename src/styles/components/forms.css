@@ -1,0 +1,52 @@
+form {
+  background: rgba(255, 255, 255, 0.5);
+  padding: 15px;
+}
+form label.form-label span {
+  display: inline-block;
+}
+form label.form-label span:nth-of-type(2) {
+  color: rgba(203, 19, 47, 0.8);
+  font-style: italic;
+  font-weight: normal;
+  margin-left: 5px;
+  font-size: 14px;
+}
+form .form-control {
+  border-radius: 0;
+}
+form .form-control.inp-err {
+  border-color: rgba(203, 19, 47, 0.5);
+  box-shadow: 0 0 0 0.1rem rgba(203, 19, 47, 0.3);
+}
+form #ImageFormContainer {
+  margin-top: 32px;
+  background: #fff;
+  border: 1px solid #ccc;
+  height: 210px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+form #ImageFormContainer #loading,
+form #ImageFormContainer #no-image,
+form #ImageFormContainer #error-image {
+  text-align: center;
+}
+form #ImageFormContainer #loading .fa-image,
+form #ImageFormContainer #no-image .fa-image,
+form #ImageFormContainer #error-image .fa-image,
+form #ImageFormContainer #loading .fa-bahai,
+form #ImageFormContainer #no-image .fa-bahai,
+form #ImageFormContainer #error-image .fa-bahai {
+  font-size: 24px;
+}
+form #ImageFormContainer #loading,
+form #ImageFormContainer #error-image {
+  position: absolute;
+}
+form #ImageFormContainer img {
+  display: block;
+  width: 100%;
+  max-height: 100%;
+}

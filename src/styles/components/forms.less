@@ -1,0 +1,59 @@
+
+form {
+  background: rgba(255, 255, 255, 0.5);
+  padding: 15px;
+
+  label.form-label {
+    span {
+      display: inline-block;
+
+      &:nth-of-type(2) {
+        color: rgba(203, 19, 47, 0.8);
+        font-style: italic;
+        font-weight: normal;
+        margin-left: 5px;
+        font-size: 14px;
+      }
+    }
+  }
+
+  .form-control {
+    border-radius: 0;
+
+    &.inp-err {
+      border-color: rgba(203, 19, 47, 0.5);
+      box-shadow: 0 0 0 0.1rem rgba(203, 19, 47, 0.3);
+    }
+  }
+
+  #ImageFormContainer {
+    margin-top:32px;
+    background: #fff;
+    border: 1px solid #ccc;
+    height: 210px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+
+    #loading, #no-image, #error-image {
+      text-align: center;
+      .fa-image, .fa-bahai {
+        font-size: 24px;
+      }
+    }
+
+    #loading, #error-image {
+      position:absolute;
+    }
+
+    #no-image {
+
+    }
+
+    img {
+      display:block;
+      width: 100%;
+      max-height: 100%;
+    }
+  }
+}

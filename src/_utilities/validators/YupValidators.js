@@ -3,9 +3,10 @@ import * as Yup from "yup";
 export const urlSchema = () => {
     return Yup.string()
         .min(3, 'Must be at least 3 characters')
-        .max(50, 'Must be less than 50 characters')
+        .max(150, 'Must be less than 50 characters')
         .required('You need fill url')
         .url('Please type a valid url')
+       // .matches(/^(?i)\.(jpg|png|gif|jpeg)$/, 'Must contain file with jpg / jpeg / png / gif extension')
 };
 
 export const nameSchema = () => {

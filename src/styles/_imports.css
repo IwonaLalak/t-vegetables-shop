@@ -12,10 +12,6 @@
 .App * {
   font-family: 'ZCOOL QingKe HuangYou', cursive, sans-serif;
 }
-.clearfix {
-  clear: both;
-  content: ' ';
-}
 .btn {
   border-radius: 0;
 }
@@ -85,11 +81,6 @@
 .btn-toolbar .btn:last-of-type {
   margin-right: 0;
 }
-table {
-  background: rgba(255, 255, 255, 0.5);
-  padding: 15px;
-  margin-top: 15px;
-}
 form {
   background: rgba(255, 255, 255, 0.5);
   padding: 15px;
@@ -110,6 +101,46 @@ form .form-control {
 form .form-control.inp-err {
   border-color: rgba(203, 19, 47, 0.5);
   box-shadow: 0 0 0 0.1rem rgba(203, 19, 47, 0.3);
+}
+form #ImageFormContainer {
+  margin-top: 32px;
+  background: #fff;
+  border: 1px solid #ccc;
+  height: 210px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+form #ImageFormContainer #loading,
+form #ImageFormContainer #no-image,
+form #ImageFormContainer #error-image {
+  text-align: center;
+}
+form #ImageFormContainer #loading .fa-image,
+form #ImageFormContainer #no-image .fa-image,
+form #ImageFormContainer #error-image .fa-image,
+form #ImageFormContainer #loading .fa-bahai,
+form #ImageFormContainer #no-image .fa-bahai,
+form #ImageFormContainer #error-image .fa-bahai {
+  font-size: 24px;
+}
+form #ImageFormContainer #loading,
+form #ImageFormContainer #error-image {
+  position: absolute;
+}
+form #ImageFormContainer img {
+  display: block;
+  width: 100%;
+  max-height: 100%;
+}
+table {
+  background: rgba(255, 255, 255, 0.5);
+  padding: 15px;
+  margin-top: 15px;
+}
+.clearfix {
+  clear: both;
+  content: ' ';
 }
 #HeaderComponent {
   background: #002f5f;

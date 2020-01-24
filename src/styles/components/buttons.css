@@ -1,0 +1,76 @@
+@font-face {
+  font-family: 'ZCOOL QingKe HuangYou';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('ZCOOL QingKe HuangYou Regular'), local('ZCOOLQingKeHuangYou-Regular'), url(https://fonts.gstatic.com/s/zcoolqingkehuangyou/v5/2Eb5L_R5IXJEWhD3AOhSvFC554MOOahI4mR4jPe4.ttf) format('truetype');
+}
+.btn {
+  border-radius: 0;
+}
+.btn:focus {
+  outline: none;
+  box-shadow: none;
+  opacity: 0.9;
+}
+.btn.btn-primary {
+  background: #002f5f;
+  border-color: #002f5f;
+}
+.btn.btn-primary:hover,
+.btn.btn-primary:active {
+  background: #002346 !important;
+  border-color: #002346 !important;
+}
+.btn.btn-secondary {
+  background: #ff3156;
+  border-color: #ff3156;
+}
+.btn.btn-secondary:hover,
+.btn.btn-secondary:active {
+  background: #cf3762 !important;
+  border-color: #cf3762 !important;
+}
+.btn.btn-info {
+  background: #1ec8d7;
+  border-color: #1ec8d7;
+}
+.btn.btn-info:hover,
+.btn.btn-info:active {
+  background: #1ba1af !important;
+  border-color: #1ba1af !important;
+}
+.btn.btn-success {
+  background: #0eca4e;
+  border-color: #0eca4e;
+}
+.btn.btn-success:hover,
+.btn.btn-success:active {
+  background: #0ea84a !important;
+  border-color: #0ea84a !important;
+}
+.btn.btn-warning {
+  background: #ff972a;
+  border-color: #ff972a;
+  color: #fff;
+}
+.btn.btn-warning:hover,
+.btn.btn-warning:active {
+  background: #e58029 !important;
+  border-color: #e58029 !important;
+}
+.btn.btn-danger {
+  background: #cb132f;
+  border-color: #cb132f;
+}
+.btn.btn-danger:hover,
+.btn.btn-danger:active {
+  background: #9b1128 !important;
+  border-color: #9b1128 !important;
+}
+.btn-toolbar .btn {
+  margin-right: 5px;
+}
+.btn-toolbar .btn:last-of-type {
+  margin-right: 0;
+}

@@ -1,0 +1,83 @@
+@import "../_variables";
+
+.btn {
+  border-radius: 0;
+
+  &:focus {
+    outline: none;
+    box-shadow: none;
+    opacity: 0.9;
+  }
+
+  &.btn-primary {
+    background: @primary-color;
+    border-color: @primary-color;
+
+    &:hover, &:active {
+      background: @primary-color-darker !important;
+      border-color: @primary-color-darker !important;
+    }
+  }
+
+  &.btn-secondary {
+    background: @accent-color;
+    border-color: @accent-color;
+
+    &:hover, &:active {
+      background: @accent-color-darker !important;
+      border-color: @accent-color-darker !important;
+    }
+  }
+
+  &.btn-info {
+    background: #1ec8d7;
+    border-color: #1ec8d7;
+
+    &:hover, &:active {
+      background: #1ba1af !important;
+      border-color: #1ba1af !important;
+    }
+  }
+
+  &.btn-success {
+    background: #0eca4e;
+    border-color: #0eca4e;
+
+    &:hover, &:active {
+      background: #0ea84a !important;
+      border-color: #0ea84a !important;
+    }
+  }
+
+  &.btn-warning {
+    background: #ff972a;
+    border-color: #ff972a;
+    color: #fff;
+
+    &:hover, &:active {
+      background: #e58029 !important;
+      border-color: #e58029 !important;
+    }
+  }
+
+  &.btn-danger {
+    background: #cb132f;
+    border-color: #cb132f;
+
+    &:hover, &:active {
+      background: #9b1128 !important;
+      border-color: #9b1128 !important;
+    }
+  }
+
+}
+
+.btn-toolbar {
+  .btn {
+    margin-right: 5px;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+}
