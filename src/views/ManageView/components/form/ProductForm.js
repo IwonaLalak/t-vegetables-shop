@@ -4,7 +4,7 @@ import {Col, Form, FormControl, FormGroup, Row} from "react-bootstrap";
 import {SaveCancelButtonGroup} from "../../../../shared/Buttons/Buttons";
 import {formVegetableSchema, urlSchema} from "../../../../_utilities/validators/YupValidators";
 import Formfield from "../../../../shared/Forms/Formfield";
-import {perOptions} from "../../../../_utilities/constvalues/constoptions";
+import {perOptions} from "../../../../_consts/constvalues/constoptions";
 import Formselect from "../../../../shared/Forms/Formselect";
 import ImageField from "./ImageField";
 
@@ -25,28 +25,24 @@ class ProductForm extends Component {
         })
     }
 
-    static getDerivedStateFromProps(props,currentState){
-        console.log('derived')
-        console.log(props,currentState)
-        if(currentState.product !== props.product){
-            console.log('retur product')
-            return{
-                product:props.product,
-                url:props.product.url
+    static getDerivedStateFromProps(props, currentState) {
+        if (currentState.product !== props.product) {
+            return {
+                product: props.product,
+                url: props.product.url
             }
-        }
-        else return null;
+        } else return null;
     }
 
     onSubmit = (values, actions) => {
-        console.log(values, actions)
+        this.props.handleSave(values);
     };
 
     onChangeForm = ({target}) => {
 
         if (target.id === 'url') {
             urlSchema().isValid(target.value).then((valid => {
-                this.setState({url: valid? target.value:null})
+                this.setState({url: valid ? target.value : null})
             }))
 
         }

@@ -5,17 +5,30 @@ import ProductsTableRow from "./components/table/ProductsTableRow";
 import {ActionButton} from "../../shared/Buttons/Buttons";
 import {Plus} from "../../_utilities/icons/FontAwesome";
 import ProductForm from "./components/form/ProductForm";
+import {productModel} from "../../_consts/models/models";
 
 export default class ManageView extends React.Component {
 
     state = {
         products: [],
-        product: {name: '', url: '', price: '', per: 'kg'},
+        product: null,
         showForm: false,
     }
 
     componentDidMount() {
+        this.setEmptyProduct()
         this.getProducts()
+    }
+
+    setEmptyProduct = () => {
+        this.setState({
+            product: productModel()
+        })
+    }
+
+    closeForm = () => {
+        this.setState({showForm: false})
+        this.setEmptyProduct();
     }
 
     onClickAdd = () => {
@@ -30,7 +43,12 @@ export default class ManageView extends React.Component {
     }
 
     onClickCancel = () => {
-        this.setState({showForm: false})
+        this.closeForm();
+    }
+
+    onClickSave = (product) => {
+        console.log(product);
+        this.closeForm();
     }
 
     onClickEdit = (product) => {
@@ -39,7 +57,7 @@ export default class ManageView extends React.Component {
 
     render() {
 
-        let {products, product,showForm} = this.state;
+        let {products, product, showForm} = this.state;
 
         return (
             <div id={'ManageView'}>
@@ -49,6 +67,7 @@ export default class ManageView extends React.Component {
                             <ProductForm
                                 product={product}
                                 handleCancel={this.onClickCancel}
+                                handleSave={this.onClickSave}
                             />
                             :
                             <>
@@ -64,7 +83,7 @@ export default class ManageView extends React.Component {
                 <ProductsTable>
                     {
                         products.map(item => (
-                            <ProductsTableRow item={item} handleEdit={this.onClickEdit}/>
+                            <ProductsTableRow item={item} handleEdit={this.onClickEdit} />
                         ))
                     }
                 </ProductsTable>
