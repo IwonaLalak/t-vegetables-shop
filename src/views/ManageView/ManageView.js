@@ -7,7 +7,10 @@ import {Plus} from "../../_utilities/icons/FontAwesome";
 import ProductForm from "./components/form/ProductForm";
 import {productModel} from "../../_consts/models/models";
 
-export default class ManageView extends React.Component {
+import {connect} from 'react-redux'
+import {getProducts} from "../../redux_storage/products/operations";
+
+class ManageView extends React.Component {
 
     state = {
         products: [],
@@ -16,8 +19,8 @@ export default class ManageView extends React.Component {
     }
 
     componentDidMount() {
+        this.props.getProducts()
         this.setEmptyProduct()
-        this.getProducts()
     }
 
     setEmptyProduct = () => {
@@ -37,11 +40,6 @@ export default class ManageView extends React.Component {
         }))
     }
 
-    getProducts = async () => {
-        const results = await getVegetables();
-        this.setState({products: results.data})
-    }
-
     onClickCancel = () => {
         this.closeForm();
     }
@@ -57,11 +55,13 @@ export default class ManageView extends React.Component {
 
     render() {
 
-        let {products, product, showForm} = this.state;
+        let {product, showForm} = this.state;
+        let {products} = this.props;
 
         return (
             <div id={'ManageView'}>
                 <div>
+                    <button onClick={()=>console.log(this.props)}>props</button>
                     {
                         showForm ?
                             <ProductForm
@@ -83,12 +83,21 @@ export default class ManageView extends React.Component {
                 <ProductsTable>
                     {
                         products.map(item => (
-                            <ProductsTableRow item={item} handleEdit={this.onClickEdit} />
+                            <ProductsTableRow item={item} handleEdit={this.onClickEdit}/>
                         ))
                     }
                 </ProductsTable>
             </div>
         )
     }
-
 }
+
+const mapStateToProps = state => ({
+    products: state.products.arr
+});
+
+const mapDispatchToProps = dispatch => ({
+    getProducts: () => dispatch(getProducts())
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(ManageView);

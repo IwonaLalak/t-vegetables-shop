@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import './styles/_imports.css';
+import './__styles/_imports.css';
 import HeaderComponent from "./shared/LayoutComponents/HeaderComponent";
 import WrapperComponent from "./shared/LayoutComponents/WrapperComponent";
 import FooterComponent from "./shared/LayoutComponents/FooterComponent";
