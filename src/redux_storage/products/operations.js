@@ -10,8 +10,21 @@ const fetchProducts = async () => {
 
 export const getProducts = () =>
     async (dispatch) => {
-        console.log(dispatch)
         const products = await fetchProducts();
-        console.log(products)
         products.map(p => dispatch(actions.add(p)))
     };
+
+export const addProduct = item =>
+    async (dispatch) => {
+        await dispatch(actions.add(item));
+    };
+
+export const editProduct = item =>
+    async (dispatch) => {
+        await dispatch(actions.edit(item))
+    }
+
+export const deleteProduct = id =>
+    async (dispatch) => {
+        await dispatch(actions.del(id))
+    }

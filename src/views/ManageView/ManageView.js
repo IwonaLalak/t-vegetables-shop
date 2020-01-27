@@ -1,5 +1,4 @@
 import React, {Component} from 'react'
-import getVegetables from "../../_database/api";
 import ProductsTable from "./components/table/ProductsTable";
 import ProductsTableRow from "./components/table/ProductsTableRow";
 import {ActionButton} from "../../shared/Buttons/Buttons";
@@ -8,7 +7,8 @@ import ProductForm from "./components/form/ProductForm";
 import {productModel} from "../../_consts/models/models";
 
 import {connect} from 'react-redux'
-import {getProducts} from "../../redux_storage/products/operations";
+import {addProduct, deleteProduct, editProduct, getProducts} from "../../redux_storage/products/operations";
+import {generateNextId} from "../../_utilities/iterators/IdsIterator";
 
 class ManageView extends React.Component {
 
@@ -19,8 +19,15 @@ class ManageView extends React.Component {
     }
 
     componentDidMount() {
-        this.props.getProducts()
+        this.props.getProducts().then(() => {
+            this.getProducts();
+        })
+
         this.setEmptyProduct()
+    }
+
+    getProducts = () => {
+        this.setState({products: this.props.products})
     }
 
     setEmptyProduct = () => {
@@ -45,23 +52,44 @@ class ManageView extends React.Component {
     }
 
     onClickSave = (product) => {
-        console.log(product);
-        this.closeForm();
+
+        if (product.id !== null && product.id !== undefined) {
+            // save edit
+
+            this.props.editProduct(
+                product
+            ).then(() => {
+                this.closeForm();
+                this.getProducts();
+            })
+
+        } else {
+            // add
+
+            this.props.addProduct(product).then(() => {
+                this.closeForm();
+                this.getProducts();
+            })
+        }
     }
 
     onClickEdit = (product) => {
         this.setState({product: product, showForm: true});
     }
 
+    onClickDelete = (id) => {
+      this.props.deleteProduct(id).then(()=>{
+          this.getProducts();
+      })
+    };
+
     render() {
 
-        let {product, showForm} = this.state;
-        let {products} = this.props;
+        let {products, product, showForm} = this.state;
 
         return (
             <div id={'ManageView'}>
                 <div>
-                    <button onClick={()=>console.log(this.props)}>props</button>
                     {
                         showForm ?
                             <ProductForm
@@ -83,7 +111,7 @@ class ManageView extends React.Component {
                 <ProductsTable>
                     {
                         products.map(item => (
-                            <ProductsTableRow item={item} handleEdit={this.onClickEdit}/>
+                            <ProductsTableRow item={item} handleEdit={this.onClickEdit} handleDelete={this.onClickDelete}/>
                         ))
                     }
                 </ProductsTable>
@@ -97,6 +125,9 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
+    addProduct: item => dispatch(addProduct(item)),
+    editProduct: item => dispatch(editProduct(item)),
+    deleteProduct: id => dispatch(deleteProduct(id)),
     getProducts: () => dispatch(getProducts())
 });
 

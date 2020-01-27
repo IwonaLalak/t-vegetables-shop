@@ -8,8 +8,8 @@ const edit = item => ({
     type: types.EDIT_PRODUCT, item
 });
 
-const del = item => ({
-    type: types.DELETE_PRODUCT, item
+const del = id => ({
+    type: types.DELETE_PRODUCT, id
 });
 
 export default {add, edit, del}

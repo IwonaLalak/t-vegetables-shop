@@ -8,8 +8,8 @@ class ProductsTableRow extends Component {
         this.props.handleEdit(item)
     }
 
-    onClickDelete = () => {
-
+    onClickDelete = (item) => {
+        this.props.handleDelete(item.id)
     }
 
     render() {
@@ -32,7 +32,7 @@ class ProductsTableRow extends Component {
             </td>
             <td>
                 <EditDeleteButtonGroup onClickEdit={()=>this.onClickEdit(item)}
-                                       onClickDelete={this.onClickDelete}
+                                       onClickDelete={()=>this.onClickDelete(item)}
                                        size={'sm'}
                                        visibleText={false}
                 />
