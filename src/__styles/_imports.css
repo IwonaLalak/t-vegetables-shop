@@ -199,3 +199,24 @@ table {
   color: #dbff9a;
   text-decoration: none;
 }
+#ManageView #SearchInput {
+  margin-top: 15px;
+}
+#ManageView .btn-search,
+#ManageView .btn-close {
+  display: inline-block;
+  cursor: pointer;
+  transition: all ease 0.3s;
+  color: #002f5f;
+}
+#ManageView .btn-search:hover {
+  color: #001b37;
+}
+#ManageView .btn-close {
+  position: absolute;
+  right: 25px;
+  margin-top: 15px;
+}
+#ManageView .btn-close:hover {
+  color: #9b1128;
+}

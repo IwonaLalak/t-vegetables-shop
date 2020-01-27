@@ -2,20 +2,21 @@ import React, {Component} from 'react'
 import ProductsTable from "./components/table/ProductsTable";
 import ProductsTableRow from "./components/table/ProductsTableRow";
 import {ActionButton} from "../../shared/Buttons/Buttons";
-import {Plus} from "../../_utilities/icons/FontAwesome";
+import {Plus, Search} from "../../_utilities/icons/FontAwesome";
 import ProductForm from "./components/form/ProductForm";
 import {productModel} from "../../_consts/models/models";
 
 import {connect} from 'react-redux'
 import {addProduct, deleteProduct, editProduct, getProducts} from "../../redux_storage/products/operations";
-import {generateNextId} from "../../_utilities/iterators/IdsIterator";
+import ProductSearchInput from "./components/searchinput/ProductSearchInput";
 
-class ManageView extends React.Component {
+class ManageView extends Component {
 
     state = {
         products: [],
         product: null,
         showForm: false,
+        showSearch: false,
     }
 
     componentDidMount() {
@@ -52,10 +53,7 @@ class ManageView extends React.Component {
     }
 
     onClickSave = (product) => {
-
         if (product.id !== null && product.id !== undefined) {
-            // save edit
-
             this.props.editProduct(
                 product
             ).then(() => {
@@ -64,8 +62,6 @@ class ManageView extends React.Component {
             })
 
         } else {
-            // add
-
             this.props.addProduct(product).then(() => {
                 this.closeForm();
                 this.getProducts();
@@ -78,14 +74,14 @@ class ManageView extends React.Component {
     }
 
     onClickDelete = (id) => {
-      this.props.deleteProduct(id).then(()=>{
-          this.getProducts();
-      })
+        this.props.deleteProduct(id).then(() => {
+            this.getProducts();
+        })
     };
 
     render() {
 
-        let {products, product, showForm} = this.state;
+        let {products, product, showForm, showSearch} = this.state;
 
         return (
             <div id={'ManageView'}>
@@ -99,6 +95,18 @@ class ManageView extends React.Component {
                             />
                             :
                             <>
+                                <div className={'float-left'}>
+                                    {
+                                        !showSearch &&
+                                        <>
+                                            <span className={'btn-search'}
+                                                  onClick={() => this.setState({showSearch: true})}
+                                            >
+                                                <Search/> show search
+                                            </span>
+                                        </>
+                                    }
+                                </div>
                                 <div className={'float-right'}>
                                     <ActionButton theme={'success'} text={'Add new'} type={'button'}
                                                   onClick={this.onClickAdd} size={'sm'} icon={<Plus/>}/>
@@ -108,10 +116,19 @@ class ManageView extends React.Component {
 
                     }
                 </div>
+                <div id={'SearchInput'}>
+                    {
+                        showSearch &&
+                        <ProductSearchInput
+                            handleClickClose={() => this.setState({showSearch: false})}
+                        />
+                    }
+                </div>
                 <ProductsTable>
                     {
                         products.map(item => (
-                            <ProductsTableRow item={item} handleEdit={this.onClickEdit} handleDelete={this.onClickDelete}/>
+                            <ProductsTableRow item={item} handleEdit={this.onClickEdit}
+                                              handleDelete={this.onClickDelete}/>
                         ))
                     }
                 </ProductsTable>

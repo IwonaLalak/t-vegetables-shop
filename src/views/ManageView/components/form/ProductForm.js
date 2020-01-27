@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {Formik} from "formik";
-import {Col, Form, FormControl, FormGroup, Row} from "react-bootstrap";
+import {Col, Form, FormGroup, Row} from "react-bootstrap";
 import {SaveCancelButtonGroup} from "../../../../shared/Buttons/Buttons";
 import {formVegetableSchema, urlSchema} from "../../../../_utilities/validators/YupValidators";
 import Formfield from "../../../../shared/Forms/Formfield";

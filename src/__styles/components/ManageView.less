@@ -1,5 +1,32 @@
-#ManageView{
+@import "../_variables";
 
+#ManageView {
+  #SearchInput {
+    margin-top: 15px;
 
+  }
 
+  .btn-search, .btn-close {
+    display: inline-block;
+    cursor: pointer;
+    transition: all ease 0.3s;
+    color: @primary-color;
+
+  }
+
+  .btn-search {
+    &:hover {
+      color: @primary-color-darkest;
+    }
+  }
+
+  .btn-close {
+    position: absolute;
+    right: 25px;
+    margin-top: 15px;
+
+    &:hover {
+      color: #9b1128;
+    }
+  }
 }
