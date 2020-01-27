@@ -16,7 +16,7 @@ class ProductsTableRow extends Component {
         let {item} = this.props;
         return (<tr>
             <td>
-                {item.img}
+                {item.url}
             </td>
             <td>
                 {item.id}

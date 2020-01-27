@@ -4,7 +4,7 @@ const getVegetablesFromLocalDB = () => [
         name: 'Carrots',
         price: 2.99,
         per: 'kg',
-        img: 'https://www.vegetables.co.nz/assets/vegetables/_resampled/FillWyI0MDAiLCIzMDAiXQ/carrots.png',
+        url: 'https://www.vegetables.co.nz/assets/vegetables/_resampled/FillWyI0MDAiLCIzMDAiXQ/carrots.png',
 
     },
     {
@@ -12,7 +12,7 @@ const getVegetablesFromLocalDB = () => [
         name: 'Potatoes',
         price: 1.89,
         per: 'kg',
-        img: 'https://www.vegetables.co.nz/assets/vegetables/_resampled/FillWyI0MDAiLCIzMDAiXQ/potatoes.png',
+        url: 'https://www.vegetables.co.nz/assets/vegetables/_resampled/FillWyI0MDAiLCIzMDAiXQ/potatoes.png',
 
     },
     {
@@ -20,7 +20,7 @@ const getVegetablesFromLocalDB = () => [
         name: 'Onions',
         price: 1.20,
         per: 'kg',
-        img: 'https://www.vegetables.co.nz/assets/vegetables/_resampled/FillWyI0MDAiLCIzMDAiXQ/onions.png',
+        url: 'https://www.vegetables.co.nz/assets/vegetables/_resampled/FillWyI0MDAiLCIzMDAiXQ/onions.png',
 
     },
     {
@@ -28,7 +28,7 @@ const getVegetablesFromLocalDB = () => [
         name: 'Letuce',
         price: 1.20,
         per: 'stuck',
-        img: 'https://www.vegetables.co.nz/assets/vegetables/_resampled/FillWyI0MDAiLCIzMDAiXQ/lettuce.png',
+        url: 'https://www.vegetables.co.nz/assets/vegetables/_resampled/FillWyI0MDAiLCIzMDAiXQ/lettuce.png',
 
     },
     {
@@ -36,7 +36,7 @@ const getVegetablesFromLocalDB = () => [
         name: 'Cabbage',
         price: 4.99,
         per: 'stuck',
-        img: 'https://www.vegetables.co.nz/assets/vegetables/_resampled/FillWyI0MDAiLCIzMDAiXQ/cabbages.png',
+        url: 'https://www.vegetables.co.nz/assets/vegetables/_resampled/FillWyI0MDAiLCIzMDAiXQ/cabbages.png',
 
     },
     {
@@ -44,7 +44,7 @@ const getVegetablesFromLocalDB = () => [
         name: 'Spring onions',
         price: 2.19,
         per: 'kg',
-        img: 'https://www.vegetables.co.nz/assets/vegetables/_resampled/FillWyI0MDAiLCIzMDAiXQ/spring-onions.png',
+        url: 'https://www.vegetables.co.nz/assets/vegetables/_resampled/FillWyI0MDAiLCIzMDAiXQ/spring-onions.png',
 
     },
     {
@@ -52,7 +52,7 @@ const getVegetablesFromLocalDB = () => [
         name: 'Broccolis',
         price: 3.15,
         per: 'kg',
-        img: 'https://www.vegetables.co.nz/assets/vegetables/_resampled/FillWyI0MDAiLCIzMDAiXQ/broccoli.png',
+        url: 'https://www.vegetables.co.nz/assets/vegetables/_resampled/FillWyI0MDAiLCIzMDAiXQ/broccoli.png',
 
     },
     {
@@ -60,7 +60,7 @@ const getVegetablesFromLocalDB = () => [
         name: 'Chilli peppers',
         price: 9.69,
         per: 'kg',
-        img: 'https://www.vegetables.co.nz/assets/vegetables/_resampled/FillWyI0MDAiLCIzMDAiXQ/chili.png',
+        url: 'https://www.vegetables.co.nz/assets/vegetables/_resampled/FillWyI0MDAiLCIzMDAiXQ/chili.png',
 
     },
     {
@@ -68,7 +68,7 @@ const getVegetablesFromLocalDB = () => [
         name: 'Garlic',
         price: 0.79,
         per: 'stuck',
-        img: 'https://www.vegetables.co.nz/assets/vegetables/_resampled/FillWyI0MDAiLCIzMDAiXQ/garlic.png',
+        url: 'https://www.vegetables.co.nz/assets/vegetables/_resampled/FillWyI0MDAiLCIzMDAiXQ/garlic.png',
 
     },
     {
@@ -76,7 +76,7 @@ const getVegetablesFromLocalDB = () => [
         name: 'Peppers',
         price: 6.69,
         per: 'kg',
-        img: 'https://www.vegetables.co.nz/assets/vegetables/_resampled/FillWyI0MDAiLCIzMDAiXQ/capsicums.png',
+        url: 'https://www.vegetables.co.nz/assets/vegetables/_resampled/FillWyI0MDAiLCIzMDAiXQ/capsicums.png',
 
     },
     {
@@ -84,7 +84,7 @@ const getVegetablesFromLocalDB = () => [
         name: 'Tomatoes',
         price: 3.65,
         per: 'kg',
-        img: 'https://www.vegetables.co.nz/assets/vegetables/_resampled/FillWyI0MDAiLCIzMDAiXQ/tomatoes.png',
+        url: 'https://www.vegetables.co.nz/assets/vegetables/_resampled/FillWyI0MDAiLCIzMDAiXQ/tomatoes.png',
 
     }
 ]

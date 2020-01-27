@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f2dcb656-23ba-4ecb-aa56-370cb7af6755" name="Default" comment="image in form">
+    <list default="true" id="f2dcb656-23ba-4ecb-aa56-370cb7af6755" name="Default" comment="update form">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/ManageView/ManageView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/ManageView/ManageView.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/ManageView/components/form/ImageField.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/ManageView/components/form/ImageField.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_database/db.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/_database/db.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/ManageView/components/form/ProductForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/ManageView/components/form/ProductForm.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/ManageView/components/table/ProductsTableRow.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/ManageView/components/table/ProductsTableRow.js" afterDir="false" />
     </list>
@@ -93,7 +92,8 @@
       <workItem from="1579679775449" duration="3000" />
       <workItem from="1579679953037" duration="19160000" />
       <workItem from="1579765800486" duration="13888000" />
-      <workItem from="1579850491065" duration="17108000" />
+      <workItem from="1579850491065" duration="17646000" />
+      <workItem from="1580112072806" duration="1591000" />
     </task>
     <task id="LOCAL-00001" summary="wrapper, footer">
       <created>1579528309136</created>
@@ -151,7 +151,14 @@
       <option name="project" value="LOCAL" />
       <updated>1579872664420</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="update form">
+      <created>1579880780695</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1579880780695</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -166,25 +173,26 @@
     <MESSAGE value="form" />
     <MESSAGE value="form utilities" />
     <MESSAGE value="image in form" />
-    <option name="LAST_COMMIT_MESSAGE" value="image in form" />
+    <MESSAGE value="update form" />
+    <option name="LAST_COMMIT_MESSAGE" value="update form" />
   </component>
   <component name="WindowStateProjectService">
     <state x="712" y="218" width="476" height="621" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1579688024470">
       <screen x="0" y="0" width="1920" height="1037" />
     </state>
     <state x="712" y="218" width="476" height="621" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1037/1920.0.1920.1080@0.0.1920.1037" timestamp="1579688024470" />
-    <state x="595" y="116" width="720" height="815" key="CommitChangelistDialog2" timestamp="1579872664215">
+    <state x="595" y="116" width="720" height="815" key="CommitChangelistDialog2" timestamp="1579880780551">
       <screen x="0" y="0" width="1920" height="1037" />
     </state>
-    <state x="595" y="116" width="720" height="815" key="CommitChangelistDialog2/0.0.1920.1037/1920.0.1920.1080@0.0.1920.1037" timestamp="1579872664215" />
+    <state x="595" y="116" width="720" height="815" key="CommitChangelistDialog2/0.0.1920.1037/1920.0.1920.1080@0.0.1920.1037" timestamp="1579880780551" />
     <state x="543" y="256" width="824" height="535" key="IDE.errors.dialog" timestamp="1579686581368">
       <screen x="0" y="0" width="1920" height="1037" />
     </state>
     <state x="543" y="256" width="824" height="535" key="IDE.errors.dialog/0.0.1920.1037/1920.0.1920.1080@0.0.1920.1037" timestamp="1579686581368" />
-    <state x="555" y="254" width="800" height="538" key="Vcs.Push.Dialog.v2" timestamp="1579872665444">
+    <state x="555" y="254" width="800" height="538" key="Vcs.Push.Dialog.v2" timestamp="1579880781650">
       <screen x="0" y="0" width="1920" height="1037" />
     </state>
-    <state x="555" y="254" width="800" height="538" key="Vcs.Push.Dialog.v2/0.0.1920.1037/1920.0.1920.1080@0.0.1920.1037" timestamp="1579872665444" />
+    <state x="555" y="254" width="800" height="538" key="Vcs.Push.Dialog.v2/0.0.1920.1037/1920.0.1920.1080@0.0.1920.1037" timestamp="1579880781650" />
     <state x="623" y="228" width="672" height="678" key="search.everywhere.popup" timestamp="1579702789078">
       <screen x="0" y="0" width="1920" height="1037" />
     </state>

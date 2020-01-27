@@ -13,28 +13,17 @@ class ProductForm extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            product: this.props.product,
+            product: null,
             url: null
         }
     }
 
-/*    componentWillReceiveProps(nextProps, nextContext) {
-        console.log('will receive',nextProps)
-        this.setState({
-            product:nextProps.product
-        })
-    }*/
 
-    /*componentDidMount() {
-        console.log('mount')
-        console.log(this.props)
-        if(Boolean(this.props.productToEdit)){
-            console.log('set product')
-            this.setState({
-                product:this.props.productToEdit
-            })
-        }
-    }*/
+    componentDidMount() {
+        this.setState({
+            product: this.props.product
+        })
+    }
 
     static getDerivedStateFromProps(props,currentState){
         console.log('derived')
@@ -42,16 +31,12 @@ class ProductForm extends Component {
         if(currentState.product !== props.product){
             console.log('retur product')
             return{
-                product:props.product
+                product:props.product,
+                url:props.product.url
             }
         }
         else return null;
     }
-
-    /*componentDidUpdate(prevProps, prevState, snapshot) {
-        console.log('update')
-        console.log(prevProps,prevState)
-    }*/
 
     onSubmit = (values, actions) => {
         console.log(values, actions)
@@ -74,8 +59,6 @@ class ProductForm extends Component {
 
         return (
             <div>
-                <button type={'button'} onClick={()=>console.log(this.state)}>state</button>
-                <FormControl value={product.name} />
                 <Formik
                     initialValues={product}
                     enableReinitialize={true}
@@ -115,7 +98,7 @@ class ProductForm extends Component {
                                             </Row>
                                         </FormGroup>
                                         <FormGroup>
-                                            <Formfield keyname={'url'} type={'url'} label={'URL path to image'}
+                                            <Formfield keyname={'url'} label={'URL path to image'} type={'url'}
                                                        formik={formik}/>
                                         </FormGroup>
                                     </Col>
