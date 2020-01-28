@@ -9,6 +9,7 @@ import {productModel} from "../../_consts/models/models";
 import {connect} from 'react-redux'
 import {addProduct, deleteProduct, editProduct, getProducts} from "../../redux_storage/products/operations";
 import ProductSearchInput from "./components/searchinput/ProductSearchInput";
+import {Badge} from "react-bootstrap";
 
 class ManageView extends Component {
 
@@ -17,6 +18,7 @@ class ManageView extends Component {
         product: null,
         showForm: false,
         showSearch: false,
+        searchValue: '',
     }
 
     componentDidMount() {
@@ -79,9 +81,25 @@ class ManageView extends Component {
         })
     };
 
+    onSubmitSearch = ({search}) => {
+        this.setState({searchValue: search})
+        this.filterSearchResults(search)
+    };
+
+    filterSearchResults = (search) => {
+        if (search === '') {
+            this.setState({products: this.props.products})
+        } else {
+
+            let results = Array.from(this.props.products).filter(i => i.name.toUpperCase().indexOf(search.toUpperCase()) > -1 || i.per === search || i.price.toString().indexOf(search.replace(',', '.')) > -1);
+
+            this.setState({products: results})
+        }
+    };
+
     render() {
 
-        let {products, product, showForm, showSearch} = this.state;
+        let {products, product, showForm, showSearch, searchValue} = this.state;
 
         return (
             <div id={'ManageView'}>
@@ -104,6 +122,10 @@ class ManageView extends Component {
                                             >
                                                 <Search/> show search
                                             </span>
+                                            {
+                                                searchValue &&
+                                                <Badge pill={true} variant={"secondary"}>filter is enabled</Badge>
+                                            }
                                         </>
                                     }
                                 </div>
@@ -120,16 +142,22 @@ class ManageView extends Component {
                     {
                         showSearch &&
                         <ProductSearchInput
+                            searchValue={searchValue}
+                            handleSubmit={this.onSubmitSearch}
                             handleClickClose={() => this.setState({showSearch: false})}
                         />
                     }
                 </div>
                 <ProductsTable>
                     {
-                        products.map(item => (
-                            <ProductsTableRow item={item} handleEdit={this.onClickEdit}
-                                              handleDelete={this.onClickDelete}/>
-                        ))
+                        products.length === 0 ?
+                            <p>There's no results</p>
+                            :
+                            products.map(item => (
+                                <ProductsTableRow item={item}
+                                                  handleEdit={this.onClickEdit}
+                                                  handleDelete={this.onClickDelete}/>
+                            ))
                     }
                 </ProductsTable>
             </div>

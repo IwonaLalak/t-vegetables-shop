@@ -7,7 +7,7 @@ import {Times} from "../../../../_utilities/icons/FontAwesome";
 const ProductSearchInput = (props) => {
 
     const onSubmit = (values, actions) => {
-        console.log(values, actions)
+        props.handleSubmit(values)
     }
 
     const onClickClose = () => {
@@ -18,7 +18,7 @@ const ProductSearchInput = (props) => {
         <>
             <span className={'btn-close'} onClick={onClickClose}><Times/> close</span>
             <Formik
-                initialValues={{search: ''}}
+                initialValues={{search: props.searchValue}}
                 enableReinitialize={true}
                 onSubmit={onSubmit}
             >
@@ -27,7 +27,8 @@ const ProductSearchInput = (props) => {
                         <Form onSubmit={formik.handleSubmit}>
                             <FormGroup>
                                 <Formfield keyname={'search'} type={'text'}
-                                           label={'Type anything and press ENTER to search table'} formik={formik}/>
+                                           label={Boolean(props.searchValue) ? 'Clear the form and press ENTER to reset' : 'Type anything and press ENTER to search table'}
+                                           formik={formik}/>
                             </FormGroup>
                         </Form>
                     )

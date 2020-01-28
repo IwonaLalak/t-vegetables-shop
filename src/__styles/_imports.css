@@ -202,6 +202,9 @@ table {
 #ManageView #SearchInput {
   margin-top: 15px;
 }
+#ManageView .badge {
+  margin-left: 3px;
+}
 #ManageView .btn-search,
 #ManageView .btn-close {
   display: inline-block;
