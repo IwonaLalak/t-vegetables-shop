@@ -6,7 +6,7 @@ export const urlSchema = () => {
         .max(150, 'Must be less than 50 characters')
         .required('You need fill url')
         .url('Please type a valid url')
-       // .matches(/^(?i)\.(jpg|png|gif|jpeg)$/, 'Must contain file with jpg / jpeg / png / gif extension')
+    // .matches(/^(?i)\.(jpg|png|gif|jpeg)$/, 'Must contain file with jpg / jpeg / png / gif extension')
 };
 
 export const nameSchema = () => {
@@ -20,6 +20,13 @@ export const priceSchema = () => {
     return Yup.string()
         .matches(/^[0-9]+(\.[0-9]{1,2})?$/, 'Must be digit with two decimal places, greather than 0')
         .required('You need fill price')
+};
+
+export const quantitySchema = () => {
+    return Yup.number()
+        .moreThan(0, 'Must be bigger than 0')
+        .max(1000, 'Max 1000')
+        .required('You need to fill quantity')
 };
 
 export const formVegetableSchema = () => {

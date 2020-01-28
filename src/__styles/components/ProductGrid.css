@@ -1,0 +1,11 @@
+#ProductGrid #ProductItem {
+  margin-top: 15px;
+}
+#ProductGrid #ProductItem .card {
+  text-align: center;
+}
+#ProductGrid #ProductItem .card img {
+  width: 60%;
+  display: block;
+  margin: 15px auto auto;
+}

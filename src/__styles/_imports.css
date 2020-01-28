@@ -199,6 +199,20 @@ table {
   color: #dbff9a;
   text-decoration: none;
 }
+#ProductGrid #ProductItem {
+  margin-top: 15px;
+}
+#ProductGrid #ProductItem .card {
+  text-align: center;
+}
+#ProductGrid #ProductItem .card img {
+  width: 60%;
+  display: block;
+  margin: 15px auto auto;
+}
+#HomeView {
+  padding-bottom: 25px;
+}
 #ManageView #SearchInput {
   margin-top: 15px;
 }

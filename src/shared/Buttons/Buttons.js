@@ -14,7 +14,7 @@ export const ActionButton = props => {
             disabled={disabled}
         >
             {
-                Boolean(icon) && <span style={Boolean(text) ? {marginRight: '5px'} : {}}>{icon}</span>
+                Boolean(icon) && <span style={Boolean(text) ? {marginRight: '10px'} : {}}>{icon}</span>
             }
             {
                 Boolean(text) && text
@@ -53,7 +53,7 @@ export const EditDeleteButtonGroup = props => {
                     type={'button'}
             >
                 {
-                    visibleIcons && <span style={visibleText ? {marginRight: '5px'} : {}}><Edit/></span>
+                    visibleIcons && <span style={visibleText ? {marginRight: '10px'} : {}}><Edit/></span>
                 }
                 {
                     visibleText && <span>Edit item</span>
@@ -66,7 +66,7 @@ export const EditDeleteButtonGroup = props => {
                     type={'button'}
             >
                 {
-                    visibleIcons && <span style={visibleText ? {marginRight: '5px'} : {}}><Delete/></span>
+                    visibleIcons && <span style={visibleText ? {marginRight: '10px'} : {}}><Delete/></span>
                 }
                 {
                     visibleText && <span>Delete item</span>
@@ -104,7 +104,7 @@ export const SaveCancelButtonGroup = props => {
                     type={'button'}
             >
                 {
-                    visibleIcons && <span style={visibleText ? {marginRight: '5px'} : {}}><Times/></span>
+                    visibleIcons && <span style={visibleText ? {marginRight: '10px'} : {}}><Times/></span>
                 }
                 {
                     visibleText && <span>Cancel</span>
@@ -117,7 +117,7 @@ export const SaveCancelButtonGroup = props => {
                     type={'submit'}
             >
                 {
-                    visibleIcons && <span style={visibleText ? {marginRight: '5px'} : {}}><Save/></span>
+                    visibleIcons && <span style={visibleText ? {marginRight: '10px'} : {}}><Save/></span>
                 }
                 {
                     visibleText && <span>Save</span>

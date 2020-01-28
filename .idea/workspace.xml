@@ -1,13 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f2dcb656-23ba-4ecb-aa56-370cb7af6755" name="Default" comment="search input">
+    <list default="true" id="f2dcb656-23ba-4ecb-aa56-370cb7af6755" name="Default" comment="filter table by search input">
+      <change afterPath="$PROJECT_DIR$/src/__styles/components/HomeView.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/__styles/components/HomeView.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/__styles/components/ProductGrid.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/__styles/components/ProductGrid.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_utilities/formaters/money.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/HomeView/components/forms/BuyForm.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/HomeView/components/grid/ProductGrid.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/HomeView/components/grid/ProductItem.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/__styles/_imports.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/__styles/_imports.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/__styles/components/ManageView.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/__styles/components/ManageView.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/__styles/components/ManageView.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/__styles/components/ManageView.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/__styles/_imports.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/__styles/_imports.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_utilities/icons/FontAwesome.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/_utilities/icons/FontAwesome.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_utilities/validators/YupValidators.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/_utilities/validators/YupValidators.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/shared/Buttons/Buttons.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/shared/Buttons/Buttons.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/HomeView/HomeView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/HomeView/HomeView.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/ManageView/ManageView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/ManageView/ManageView.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/ManageView/components/searchinput/ProductSearchInput.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/ManageView/components/searchinput/ProductSearchInput.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/ManageView/components/form/ImageField.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/ManageView/components/forms/ImageField.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/ManageView/components/form/ProductForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/ManageView/components/forms/ProductForm.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,15 +57,16 @@
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/redux_storage/products" />
-      <recent name="$PROJECT_DIR$/src/_consts" />
-      <recent name="$PROJECT_DIR$/src/views/ManageView/components/table" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/shared/Forms" />
       <recent name="$PROJECT_DIR$/src/views/ManageView" />
       <recent name="$PROJECT_DIR$/src/views/HomeView" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/views/HomeView/components/grid" />
+      <recent name="$PROJECT_DIR$/src/redux_storage/products" />
+      <recent name="$PROJECT_DIR$/src/_consts" />
+      <recent name="$PROJECT_DIR$/src/views/ManageView/components/table" />
     </key>
   </component>
   <component name="ServiceViewManager">
@@ -99,7 +114,7 @@
       <workItem from="1579765800486" duration="13888000" />
       <workItem from="1579850491065" duration="17646000" />
       <workItem from="1580112072806" duration="17211000" />
-      <workItem from="1580196795323" duration="5744000" />
+      <workItem from="1580196795323" duration="17788000" />
     </task>
     <task id="LOCAL-00001" summary="wrapper, footer">
       <created>1579528309136</created>
@@ -199,7 +214,14 @@
       <option name="project" value="LOCAL" />
       <updated>1580139289495</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="filter table by search input">
+      <created>1580209736347</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1580209736347</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -220,25 +242,30 @@
     <MESSAGE value="vegetabed getting from redux, redux construction" />
     <MESSAGE value="redux actions" />
     <MESSAGE value="search input" />
-    <option name="LAST_COMMIT_MESSAGE" value="search input" />
+    <MESSAGE value="filter table by search input" />
+    <option name="LAST_COMMIT_MESSAGE" value="filter table by search input" />
   </component>
   <component name="WindowStateProjectService">
     <state x="712" y="218" width="476" height="621" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1579688024470">
       <screen x="0" y="0" width="1920" height="1037" />
     </state>
     <state x="712" y="218" width="476" height="621" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1037/1920.0.1920.1080@0.0.1920.1037" timestamp="1579688024470" />
-    <state x="595" y="116" width="720" height="815" key="CommitChangelistDialog2" timestamp="1580139289367">
+    <state x="595" y="116" width="720" height="815" key="CommitChangelistDialog2" timestamp="1580209736107">
       <screen x="0" y="0" width="1920" height="1037" />
     </state>
-    <state x="595" y="116" width="720" height="815" key="CommitChangelistDialog2/0.0.1920.1037/1920.0.1920.1080@0.0.1920.1037" timestamp="1580139289367" />
+    <state x="595" y="116" width="720" height="815" key="CommitChangelistDialog2/0.0.1920.1037/1920.0.1920.1080@0.0.1920.1037" timestamp="1580209736107" />
     <state x="543" y="256" width="824" height="535" key="IDE.errors.dialog" timestamp="1579686581368">
       <screen x="0" y="0" width="1920" height="1037" />
     </state>
     <state x="543" y="256" width="824" height="535" key="IDE.errors.dialog/0.0.1920.1037/1920.0.1920.1080@0.0.1920.1037" timestamp="1579686581368" />
-    <state x="555" y="254" width="800" height="538" key="Vcs.Push.Dialog.v2" timestamp="1580139290585">
+    <state x="464" y="153" width="1425" height="740" key="SettingsEditor" timestamp="1580210605440">
       <screen x="0" y="0" width="1920" height="1037" />
     </state>
-    <state x="555" y="254" width="800" height="538" key="Vcs.Push.Dialog.v2/0.0.1920.1037/1920.0.1920.1080@0.0.1920.1037" timestamp="1580139290585" />
+    <state x="464" y="153" width="1425" height="740" key="SettingsEditor/0.0.1920.1037/1920.0.1920.1080@0.0.1920.1037" timestamp="1580210605440" />
+    <state x="555" y="254" width="800" height="538" key="Vcs.Push.Dialog.v2" timestamp="1580209737621">
+      <screen x="0" y="0" width="1920" height="1037" />
+    </state>
+    <state x="555" y="254" width="800" height="538" key="Vcs.Push.Dialog.v2/0.0.1920.1037/1920.0.1920.1080@0.0.1920.1037" timestamp="1580209737621" />
     <state x="623" y="228" width="672" height="678" key="search.everywhere.popup" timestamp="1579702789078">
       <screen x="0" y="0" width="1920" height="1037" />
     </state>

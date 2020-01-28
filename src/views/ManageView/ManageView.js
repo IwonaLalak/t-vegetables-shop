@@ -3,7 +3,7 @@ import ProductsTable from "./components/table/ProductsTable";
 import ProductsTableRow from "./components/table/ProductsTableRow";
 import {ActionButton} from "../../shared/Buttons/Buttons";
 import {Plus, Search} from "../../_utilities/icons/FontAwesome";
-import ProductForm from "./components/form/ProductForm";
+import ProductForm from "./components/forms/ProductForm";
 import {productModel} from "../../_consts/models/models";
 
 import {connect} from 'react-redux'
@@ -154,7 +154,8 @@ class ManageView extends Component {
                             <p>There's no results</p>
                             :
                             products.map(item => (
-                                <ProductsTableRow item={item}
+                                <ProductsTableRow key={item.id}
+                                                  item={item}
                                                   handleEdit={this.onClickEdit}
                                                   handleDelete={this.onClickDelete}/>
                             ))
