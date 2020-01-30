@@ -2,23 +2,23 @@ import React from 'react';
 import {Formik} from "formik";
 import {Form, FormControl} from "react-bootstrap";
 import {ActionButton} from "../../../../shared/Buttons/Buttons";
-import {Cart, Minus, Plus} from "../../../../_utilities/icons/FontAwesome";
-import {quantitySchema} from "../../../../_utilities/validators/YupValidators";
+import {Cart, Check, Minus, Plus} from "../../../../_utilities/icons/FontAwesome";
+import {formBuySchema} from "../../../../_utilities/validators/YupValidators";
 
-function BuyForm({quantity, handleChange, handleDecrease, handleIncrease, handleClickBuy}) {
+function BuyForm({inBasket, quantity, handleChange, handleDecrease, handleIncrease, handleClickBuy}) {
 
     const onSubmit = (values, actions) => {
         handleChange({values})
     }
 
-    const formBuySchema = quantitySchema();
+    const formBuySchemaz = formBuySchema();
 
     return (
         <div>
             <Formik
                 initialValues={{quantity}}
                 enableReinitialize={true}
-                validationSchema={formBuySchema}
+                validationSchema={formBuySchemaz}
                 onSubmit={onSubmit}
             >
                 {
@@ -41,8 +41,11 @@ function BuyForm({quantity, handleChange, handleDecrease, handleIncrease, handle
                             />
                             <ActionButton icon={<Plus/>} type={'button'} theme={'primary'}
                                           onClick={() => handleIncrease()}/>
-                            <ActionButton theme={'secondary'} type={'button'} text={'Buy'} icon={<Cart/>}
-                                          onClick={() => handleClickBuy}
+                            <ActionButton theme={'secondary'} type={'button'}
+                                          text={inBasket?'Bought':'Buy'}
+                                          icon={inBasket?<Check/>:<Cart/>}
+                                          disabled={inBasket}
+                                          onClick={() => handleClickBuy()}
                             />
                         </Form>
                     )

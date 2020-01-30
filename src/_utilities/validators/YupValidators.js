@@ -24,7 +24,7 @@ export const priceSchema = () => {
 
 export const quantitySchema = () => {
     return Yup.number()
-        .moreThan(0, 'Must be bigger than 0')
+        .min(0, 'Must be equal or bigger than 0')
         .max(1000, 'Max 1000')
         .required('You need to fill quantity')
 };
@@ -34,5 +34,11 @@ export const formVegetableSchema = () => {
         name: nameSchema(),
         url: urlSchema(),
         price: priceSchema()
+    });
+};
+
+export const formBuySchema = () => {
+    return Yup.object().shape({
+        quantity: quantitySchema()
     });
 };

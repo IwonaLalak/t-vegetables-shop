@@ -1,7 +1,5 @@
 import React from 'react';
 import {Col, Card} from "react-bootstrap";
-import {ActionButton} from "../../../../shared/Buttons/Buttons";
-import {Cart} from "../../../../_utilities/icons/FontAwesome";
 import {formatMoney} from "../../../../_utilities/formaters/money";
 import BuyForm from "../forms/BuyForm";
 
@@ -38,12 +36,14 @@ class ProductItem extends React.Component {
     }
 
     onClickBuy = () => {
+        console.log(this.props.item)
         console.log('buy..')
+        this.setState({inBasket:true})
     }
 
     render() {
         let {item: {url, name, price, per, id}} = this.props;
-        let {quantity} = this.state;
+        let {quantity, inBasket} = this.state;
 
         return (
             <Col xs={12} sm={12} md={6} lg={4} xl={3}>
@@ -57,16 +57,20 @@ class ProductItem extends React.Component {
                             </Card.Text>
                         </Card.Body>
                         <Card.Footer>
-                            <div>
-                                {quantity}
-                            </div>
                             <BuyForm
                                 quantity={quantity}
                                 handleDecrease={this.decreaseQuantity}
                                 handleIncrease={this.increaseQuantity}
                                 handleChange={this.onChangeQuantity}
                                 handleClickBuy={this.onClickBuy}
+                                inBasket={inBasket}
                             />
+                                {
+                                    inBasket &&
+                                        <div>
+                                           x {per} in basket...
+                                        </div>
+                                }
                         </Card.Footer>
                     </Card>
                 </div>
