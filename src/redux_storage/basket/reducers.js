@@ -1,7 +1,15 @@
 import types from './types'
 
 const INITIAL = {
-    arr: []
+    arr: [
+        {
+            id:2,
+            name:'Potatoes',
+            per: 'kg',
+            price: 1.89,
+            quantity: 3
+        }
+    ]
 };
 
 const basketReducer = (state = INITIAL, action) => {

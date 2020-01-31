@@ -10,6 +10,11 @@ class ProductItem extends React.Component {
         inBasket: false,
     }
 
+    componentDidMount() {
+        console.log(this.props)
+    }
+
+
     decreaseQuantity = () => {
         this.setState(prevState => {
             if (prevState.quantity !== 0)

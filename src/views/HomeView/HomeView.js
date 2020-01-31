@@ -7,17 +7,13 @@ class HomeView extends Component {
 
     componentDidMount() {
         this.props.getProducts();
-
-        console.log(this.props)
-
     }
 
-
     render() {
-        let {products} = this.props;
+        let {products, basket} = this.props;
         return (
             <div id={'HomeView'}>
-                <ProductGrid products={products}/>
+                <ProductGrid products={products} basket={basket}/>
             </div>
         )
     }
@@ -26,7 +22,7 @@ class HomeView extends Component {
 
 const mapStateToProps = state => ({
     products: state.products.arr,
-    basket:state.basket.arr
+    basket: state.basket.arr
 });
 
 const mapDispatchToProps = dispatch => ({
