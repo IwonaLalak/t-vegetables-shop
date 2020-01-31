@@ -10,7 +10,7 @@ export const removeFromBasket = id =>
         await dispatch(actions.remove(id))
     };
 
-export const changeQuantity = item =>
+export const changeQuantity = (id,quantity) =>
     async (dispatch) => {
-        await dispatch(actions.changeQuantity(item))
+        await dispatch(actions.changeQuantity(id,quantity))
     };

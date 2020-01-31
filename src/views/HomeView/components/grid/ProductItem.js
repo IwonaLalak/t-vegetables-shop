@@ -2,6 +2,9 @@ import React from 'react';
 import {Col, Card} from "react-bootstrap";
 import {formatMoney} from "../../../../_utilities/formaters/money";
 import BuyForm from "../forms/BuyForm";
+import {getProducts} from "../../../../redux_storage/products/operations";
+import {connect} from "react-redux";
+import {changeQuantity} from "../../../../redux_storage/basket/operations";
 
 class ProductItem extends React.Component {
 
@@ -11,43 +14,63 @@ class ProductItem extends React.Component {
     }
 
     componentDidMount() {
-        console.log(this.props)
+        if (Boolean(this.props.basketItem)) {
+            this.setState({inBasket: true, quantity: this.props.basketItem.quantity})
+        }
     }
 
 
     decreaseQuantity = () => {
         this.setState(prevState => {
-            if (prevState.quantity !== 0)
-                return (
-                    {
-                        quantity: prevState.quantity - 1,
-                    }
-                )
-        });
+                if (prevState.quantity !== 0)
+                    return (
+                        {
+                            quantity: prevState.quantity - 1,
+                        }
+                    )
+            },
+            () => {
+                this.changeQuantityInBasket()
+            });
     }
 
     increaseQuantity = () => {
         this.setState(prevState => {
-            if (prevState.quantity !== 1000)
-                return ({
-                        quantity: prevState.quantity + 1,
-                    }
-                )
-        });
+                if (prevState.quantity !== 1000)
+                    return ({
+                            quantity: prevState.quantity + 1,
+                        }
+                    )
+            },
+            () => {
+                this.changeQuantityInBasket()
+            });
     }
 
     onChangeQuantity = ({values: {quantity}}) => {
-        this.setState({quantity})
+
+        //todo: walidacja, aby można bylo wprowadzać wartości float, a nie tylko integer
+
+        this.setState(() => ({quantity}),
+            () => {
+                this.changeQuantityInBasket()
+            })
     }
 
     onClickBuy = () => {
         console.log(this.props.item)
         console.log('buy..')
-        this.setState({inBasket:true})
+        this.setState({inBasket: true})
     }
 
+    changeQuantityInBasket = (quantity = this.state.quantity) => {
+        if (Boolean(this.props.basketItem)) {
+            this.props.changeQuantity(this.props.basketItem.id, quantity)
+        }
+    };
+
     render() {
-        let {item: {url, name, price, per, id}} = this.props;
+        let {item: {url, name, price, per}} = this.props;
         let {quantity, inBasket} = this.state;
 
         return (
@@ -70,12 +93,12 @@ class ProductItem extends React.Component {
                                 handleClickBuy={this.onClickBuy}
                                 inBasket={inBasket}
                             />
-                                {
-                                    inBasket &&
-                                        <div>
-                                           x {per} in basket...
-                                        </div>
-                                }
+                            {
+                                inBasket &&
+                                <div>
+                                    {quantity} {per} in basket...
+                                </div>
+                            }
                         </Card.Footer>
                     </Card>
                 </div>
@@ -84,4 +107,8 @@ class ProductItem extends React.Component {
     }
 }
 
-export default ProductItem;
+const mapDispatchToProps = dispatch => ({
+    changeQuantity: (id, quantity) => dispatch(changeQuantity(id, quantity))
+});
+
+export default connect(null, mapDispatchToProps)(ProductItem);

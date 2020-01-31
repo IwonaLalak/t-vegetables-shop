@@ -8,8 +8,8 @@ const remove = id => ({
     type: types.REMOVE_FROM_BASKET, id
 });
 
-const changeQuantity = item => ({
-    type: types.CHANGE_QUANTITY_IN_BASKET, item
+const changeQuantity = (id, quantity) => ({
+    type: types.CHANGE_QUANTITY_IN_BASKET, id, quantity
 });
 
 export default {add, remove, changeQuantity}
