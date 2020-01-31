@@ -74,3 +74,13 @@
 .btn-toolbar .btn:last-of-type {
   margin-right: 0;
 }
+.remove-btn {
+  display: inline-block;
+  margin-left: 5px;
+  cursor: pointer;
+  transition: all ease 0.3s;
+  color: #cb132f;
+}
+.remove-btn:hover {
+  color: #9b1128;
+}

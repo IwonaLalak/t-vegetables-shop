@@ -24,7 +24,7 @@ export const priceSchema = () => {
 
 export const quantitySchema = () => {
     return Yup.number()
-        .min(0, 'Must be equal or bigger than 0')
+        .min(1, 'Must be equal or bigger than 1')
         .max(1000, 'Max 1000')
         .required('You need to fill quantity')
 };

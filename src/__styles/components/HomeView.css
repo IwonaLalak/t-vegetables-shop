@@ -1,3 +1,12 @@
 #HomeView {
   padding-bottom: 25px;
 }
+#HomeView .change-alert-info {
+  color: #999;
+  font-style: italic;
+  font-size: 14px;
+  margin-top: 3px;
+}
+#HomeView .quantity-in-basket {
+  margin-top: 3px;
+}

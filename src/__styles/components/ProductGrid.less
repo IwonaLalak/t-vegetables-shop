@@ -1,31 +1,39 @@
 #ProductGrid {
 
   #ProductItem {
-    margin-top: 15px;
+    padding-top: 15px;
+    display: flex;
+    height: 100%;
 
     .card {
       text-align: center;
+
       img {
         width: 60%;
         display: block;
         margin: 15px auto auto;
       }
 
-      form{
-        padding:0;
+      .card-footer {
+        height: 100%;
+      }
+
+      form {
+        padding: 0;
         text-align: center;
-        display:inline-flex;
+        display: inline-flex;
         box-sizing: border-box;
 
-        input,button{
-          display:inline-block;
-          flex-grow:1;
+        input, button {
+          display: inline-block;
+          flex-grow: 1;
         }
 
-       input[name="quantity"]{
-         width: 70px;
-         text-align: center;
-       }
+        input[name="quantity"] {
+          width: 70px;
+          text-align: center;
+        }
+
         input::-webkit-outer-spin-button,
         input::-webkit-inner-spin-button {
           -webkit-appearance: none;
@@ -33,8 +41,9 @@
         }
 
         /* Firefox */
+
         input[type=number] {
-          -moz-appearance:textfield;
+          -moz-appearance: textfield;
         }
       }
     }

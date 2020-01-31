@@ -5,7 +5,7 @@ import {ActionButton} from "../../../../shared/Buttons/Buttons";
 import {Cart, Check, Minus, Plus} from "../../../../_utilities/icons/FontAwesome";
 import {formBuySchema} from "../../../../_utilities/validators/YupValidators";
 
-function BuyForm({inBasket, quantity, handleChange, handleDecrease, handleIncrease, handleClickBuy}) {
+function BuyForm({inBasket, quantity, handleChange, handleDecrease, handleIncrease, handleClickBuy, handleSetAlert}) {
 
     const onSubmit = (values, actions) => {
         handleChange({values})
@@ -25,6 +25,7 @@ function BuyForm({inBasket, quantity, handleChange, handleDecrease, handleIncrea
                     formik => (
                         <Form
                             inline={true}
+                            onChange={()=>handleSetAlert()}
                             onSubmit={formik.handleSubmit}
                         >
                             <ActionButton icon={<Minus/>} type={'button'} theme={'primary'}

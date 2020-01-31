@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {Button, ButtonToolbar} from "react-bootstrap";
-import {Delete, Edit, Save, Times} from "../../_utilities/icons/FontAwesome";
+import {Trash, Edit, Save, Times} from "../../_utilities/icons/FontAwesome";
 
 export const ActionButton = props => {
     let {icon, text, theme, size, type, disabled, onClick} = props;
@@ -66,7 +66,7 @@ export const EditDeleteButtonGroup = props => {
                     type={'button'}
             >
                 {
-                    visibleIcons && <span style={visibleText ? {marginRight: '10px'} : {}}><Delete/></span>
+                    visibleIcons && <span style={visibleText ? {marginRight: '10px'} : {}}><Trash/></span>
                 }
                 {
                     visibleText && <span>Delete item</span>
@@ -142,3 +142,10 @@ SaveCancelButtonGroup.defaultProps = {
     size: '',
     disabled: false,
 };
+
+export const InlineRemoveBtn = ({handleClick}) =>
+    <div className={'remove-btn'} onClick={handleClick}><Trash/> remove</div>
+
+InlineRemoveBtn.propTypes = {
+    handleClick: PropTypes.func
+}

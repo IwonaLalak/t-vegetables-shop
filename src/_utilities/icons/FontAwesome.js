@@ -42,7 +42,7 @@ export const Save = () => {
 export const Edit = () => {
     return <FontAwesomeIcon icon={faEdit}/>
 };
-export const Delete = () => {
+export const Trash = () => {
     return <FontAwesomeIcon icon={faTrash}/>
 };
 

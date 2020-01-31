@@ -14,8 +14,6 @@ const productsReducer = (state = INITIAL, action) => {
                     ...state, arr: [...state.arr, action.item]
                 };
             } else {
-                console.log(state.arr)
-
                 return {
                     ...state, arr: [...state.arr, Object.assign(action.item, {id: generateNextId(state.arr)})]
                 };

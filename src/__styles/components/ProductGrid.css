@@ -1,5 +1,7 @@
 #ProductGrid #ProductItem {
-  margin-top: 15px;
+  padding-top: 15px;
+  display: flex;
+  height: 100%;
 }
 #ProductGrid #ProductItem .card {
   text-align: center;
@@ -8,6 +10,9 @@
   width: 60%;
   display: block;
   margin: 15px auto auto;
+}
+#ProductGrid #ProductItem .card .card-footer {
+  height: 100%;
 }
 #ProductGrid #ProductItem .card form {
   padding: 0;

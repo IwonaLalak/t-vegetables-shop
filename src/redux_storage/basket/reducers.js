@@ -15,12 +15,15 @@ const INITIAL = {
 const basketReducer = (state = INITIAL, action) => {
     switch (action.type) {
         case types.ADD_TO_BASKET: {
-            console.log("impl add")
-            return state
+            if (!Boolean(state.arr.find(i => i.id === action.item.id)))
+                return {...state, arr: [...state.arr, action.item]}
+            else
+                return state
         }
         case types.REMOVE_FROM_BASKET: {
-            console.log("impl remove")
-            return state
+            let arr = state.arr;
+            arr.splice(arr.indexOf(arr.find(i => i.id === action.id)), 1);
+            return {arr}
         }
         case types.CHANGE_QUANTITY_IN_BASKET: {
 

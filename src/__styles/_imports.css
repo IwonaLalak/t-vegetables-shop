@@ -81,6 +81,16 @@
 .btn-toolbar .btn:last-of-type {
   margin-right: 0;
 }
+.remove-btn {
+  display: inline-block;
+  margin-left: 5px;
+  cursor: pointer;
+  transition: all ease 0.3s;
+  color: #cb132f;
+}
+.remove-btn:hover {
+  color: #9b1128;
+}
 form {
   background: rgba(255, 255, 255, 0.5);
   padding: 15px;
@@ -200,7 +210,9 @@ table {
   text-decoration: none;
 }
 #ProductGrid #ProductItem {
-  margin-top: 15px;
+  padding-top: 15px;
+  display: flex;
+  height: 100%;
 }
 #ProductGrid #ProductItem .card {
   text-align: center;
@@ -209,6 +221,9 @@ table {
   width: 60%;
   display: block;
   margin: 15px auto auto;
+}
+#ProductGrid #ProductItem .card .card-footer {
+  height: 100%;
 }
 #ProductGrid #ProductItem .card form {
   padding: 0;
@@ -236,6 +251,15 @@ table {
 }
 #HomeView {
   padding-bottom: 25px;
+}
+#HomeView .change-alert-info {
+  color: #999;
+  font-style: italic;
+  font-size: 14px;
+  margin-top: 3px;
+}
+#HomeView .quantity-in-basket {
+  margin-top: 3px;
 }
 #ManageView #SearchInput {
   margin-top: 15px;

@@ -2,15 +2,17 @@ import React from 'react';
 import {Col, Card} from "react-bootstrap";
 import {formatMoney} from "../../../../_utilities/formaters/money";
 import BuyForm from "../forms/BuyForm";
-import {getProducts} from "../../../../redux_storage/products/operations";
 import {connect} from "react-redux";
-import {changeQuantity} from "../../../../redux_storage/basket/operations";
+import {addToBasket, changeQuantity, removeFromBasket} from "../../../../redux_storage/basket/operations";
+import {InlineRemoveBtn} from "../../../../shared/Buttons/Buttons";
+
 
 class ProductItem extends React.Component {
 
     state = {
         quantity: 1,
         inBasket: false,
+        setAlert: false,
     }
 
     componentDidMount() {
@@ -22,10 +24,11 @@ class ProductItem extends React.Component {
 
     decreaseQuantity = () => {
         this.setState(prevState => {
-                if (prevState.quantity !== 0)
+                if (prevState.quantity !== 1)
                     return (
                         {
                             quantity: prevState.quantity - 1,
+                            setAlert: false
                         }
                     )
             },
@@ -39,6 +42,7 @@ class ProductItem extends React.Component {
                 if (prevState.quantity !== 1000)
                     return ({
                             quantity: prevState.quantity + 1,
+                            setAlert: false
                         }
                     )
             },
@@ -51,39 +55,72 @@ class ProductItem extends React.Component {
 
         //todo: walidacja, aby można bylo wprowadzać wartości float, a nie tylko integer
 
-        this.setState(() => ({quantity}),
+        this.setState(() => ({
+                quantity,
+                setAlert: false
+            }),
             () => {
                 this.changeQuantityInBasket()
             })
-    }
+    };
 
     onClickBuy = () => {
-        console.log(this.props.item)
-        console.log('buy..')
-        this.setState({inBasket: true})
-    }
+
+        if (this.state.quantity > 0) {
+            this.props.addToBasket(
+                Object.assign(this.props.item, {quantity: this.state.quantity})
+            ).then(() => {
+                console.log('added to basket')
+                this.setState({inBasket: true})
+            })
+        }
+    };
 
     changeQuantityInBasket = (quantity = this.state.quantity) => {
+
+        console.log('current value of quantity: ', quantity)
+
         if (Boolean(this.props.basketItem)) {
-            this.props.changeQuantity(this.props.basketItem.id, quantity)
+            this.props.changeQuantity(this.props.basketItem.id, quantity).then(() => {
+                console.log('changed quantity in basket')
+            })
         }
+    };
+
+    onSetAlert = () => {
+        this.setState({
+            setAlert: true
+        })
+    };
+
+    onClickRemove = () => {
+        if (Boolean(this.props.basketItem))
+            this.props.removeFromBasket(this.props.basketItem.id).then(() => {
+                console.log('removed from basket')
+                this.setState({
+                    inBasket: false,
+                    quantity: 1
+                })
+            })
     };
 
     render() {
         let {item: {url, name, price, per}} = this.props;
-        let {quantity, inBasket} = this.state;
+        let {quantity, inBasket, setAlert} = this.state;
 
         return (
             <Col xs={12} sm={12} md={6} lg={4} xl={3}>
                 <div id={'ProductItem'}>
                     <Card>
-                        <Card.Img variant="top" src={url}/>
-                        <Card.Body>
-                            <Card.Title>{name}</Card.Title>
-                            <Card.Text>
-                                {formatMoney(price)} per {per}
-                            </Card.Text>
-                        </Card.Body>
+                        <div>
+                            <Card.Img variant="top" src={url}/>
+                            <Card.Body>
+                                <Card.Title>{name}</Card.Title>
+                                <Card.Text>
+                                    {formatMoney(price)} per {per}
+                                </Card.Text>
+                            </Card.Body>
+                        </div>
                         <Card.Footer>
                             <BuyForm
                                 quantity={quantity}
@@ -91,12 +128,22 @@ class ProductItem extends React.Component {
                                 handleIncrease={this.increaseQuantity}
                                 handleChange={this.onChangeQuantity}
                                 handleClickBuy={this.onClickBuy}
+                                handleSetAlert={this.onSetAlert}
                                 inBasket={inBasket}
                             />
                             {
+                                setAlert &&
+                                <div className={'change-alert-info'}>
+                                    Press ENTER to accept
+                                </div>
+                            }
+                            {
                                 inBasket &&
-                                <div>
-                                    {quantity} {per} in basket...
+                                <div className={'quantity-in-basket'}>
+                                    <span>
+                                        {quantity} {per} in basket
+                                    </span>
+                                    <InlineRemoveBtn handleClick={this.onClickRemove}/>
                                 </div>
                             }
                         </Card.Footer>
@@ -108,7 +155,10 @@ class ProductItem extends React.Component {
 }
 
 const mapDispatchToProps = dispatch => ({
-    changeQuantity: (id, quantity) => dispatch(changeQuantity(id, quantity))
+    changeQuantity: (id, quantity) => dispatch(changeQuantity(id, quantity)),
+    removeFromBasket: id => dispatch(removeFromBasket(id)),
+    addToBasket: item => dispatch(addToBasket(item))
+
 });
 
 export default connect(null, mapDispatchToProps)(ProductItem);
