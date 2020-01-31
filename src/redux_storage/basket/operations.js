@@ -1,0 +1,16 @@
+import actions from "./actions";
+
+export const addToBasket = item =>
+    async (dispatch) => {
+        await dispatch(actions.add(item))
+    };
+
+export const removeFromBasket = id =>
+    async (dispatch) => {
+        await dispatch(actions.remove(id))
+    };
+
+export const changeQuantity = item =>
+    async (dispatch) => {
+        await dispatch(actions.changeQuantity(item))
+    };

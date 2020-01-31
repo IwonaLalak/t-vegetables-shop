@@ -7,6 +7,9 @@ class HomeView extends Component {
 
     componentDidMount() {
         this.props.getProducts();
+
+        console.log(this.props)
+
     }
 
 
@@ -22,7 +25,8 @@ class HomeView extends Component {
 }
 
 const mapStateToProps = state => ({
-    products: state.products.arr
+    products: state.products.arr,
+    basket:state.basket.arr
 });
 
 const mapDispatchToProps = dispatch => ({
