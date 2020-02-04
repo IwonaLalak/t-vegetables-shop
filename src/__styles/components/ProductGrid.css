@@ -19,7 +19,6 @@
   text-align: center;
   display: inline-flex;
   box-sizing: border-box;
-  /* Firefox */
 }
 #ProductGrid #ProductItem .card form input,
 #ProductGrid #ProductItem .card form button {
@@ -29,12 +28,4 @@
 #ProductGrid #ProductItem .card form input[name="quantity"] {
   width: 70px;
   text-align: center;
-}
-#ProductGrid #ProductItem .card form input::-webkit-outer-spin-button,
-#ProductGrid #ProductItem .card form input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-#ProductGrid #ProductItem .card form input[type=number] {
-  -moz-appearance: textfield;
 }

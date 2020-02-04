@@ -5,7 +5,7 @@ import {ActionButton} from "../../../../shared/Buttons/Buttons";
 import {Cart, Check, Minus, Plus} from "../../../../_utilities/icons/FontAwesome";
 import {formBuySchema} from "../../../../_utilities/validators/YupValidators";
 
-function BuyForm({inBasket, quantity, handleChange, handleDecrease, handleIncrease, handleClickBuy, handleSetAlert}) {
+function BuyForm({dontShowBuyButton, disableInput, inBasket, quantity, handleChange, handleDecrease, handleIncrease, handleClickBuy, handleSetAlert}) {
 
     const onSubmit = (values, actions) => {
         handleChange({values})
@@ -39,15 +39,19 @@ function BuyForm({inBasket, quantity, handleChange, handleDecrease, handleIncrea
                                 id={'quantity'}
                                 className={(formik.touched.quantity && formik.errors.quantity) && 'inp-err'}
                                 {...formik.getFieldProps('quantity')}
+                                disabled={disableInput}
                             />
                             <ActionButton icon={<Plus/>} type={'button'} theme={'primary'}
                                           onClick={() => handleIncrease()}/>
-                            <ActionButton theme={'secondary'} type={'button'}
-                                          text={inBasket?'Bought':'Buy'}
-                                          icon={inBasket?<Check/>:<Cart/>}
-                                          disabled={inBasket}
-                                          onClick={() => handleClickBuy()}
-                            />
+                            {
+                                !dontShowBuyButton &&
+                                <ActionButton theme={'secondary'} type={'button'}
+                                              text={inBasket?'Bought':'Buy'}
+                                              icon={inBasket?<Check/>:<Cart/>}
+                                              disabled={inBasket}
+                                              onClick={() => handleClickBuy()}
+                                />
+                            }
                         </Form>
                     )
                 }

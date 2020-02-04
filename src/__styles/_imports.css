@@ -95,6 +95,14 @@ form {
   background: rgba(255, 255, 255, 0.5);
   padding: 15px;
 }
+form input::-webkit-outer-spin-button,
+form input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+form input[type=number] {
+  -moz-appearance: textfield;
+}
 form label.form-label span {
   display: inline-block;
 }
@@ -230,7 +238,6 @@ table {
   text-align: center;
   display: inline-flex;
   box-sizing: border-box;
-  /* Firefox */
 }
 #ProductGrid #ProductItem .card form input,
 #ProductGrid #ProductItem .card form button {
@@ -240,14 +247,6 @@ table {
 #ProductGrid #ProductItem .card form input[name="quantity"] {
   width: 70px;
   text-align: center;
-}
-#ProductGrid #ProductItem .card form input::-webkit-outer-spin-button,
-#ProductGrid #ProductItem .card form input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-#ProductGrid #ProductItem .card form input[type=number] {
-  -moz-appearance: textfield;
 }
 #HomeView {
   padding-bottom: 25px;
@@ -284,4 +283,52 @@ table {
 }
 #ManageView .btn-close:hover {
   color: #9b1128;
+}
+#BasketView #CheckProductsStage td {
+  font-size: 18px;
+  vertical-align: middle;
+}
+#BasketView #CheckProductsStage .product-image {
+  width: 9rem;
+}
+#BasketView #CheckProductsStage .product-name {
+  font-size: 20px;
+  min-width: 10rem;
+}
+#BasketView #CheckProductsStage .product-amount form {
+  background: transparent;
+}
+#BasketView #CheckProductsStage .product-amount form input[name='quantity'] {
+  width: 5rem;
+  text-align: center;
+}
+#BasketView #CheckProductsStage .product-amount form .btn-primary {
+  background: #f5f5f5;
+  color: #888;
+  border-color: #888;
+}
+#BasketView #CheckProductsStage .product-amount form .btn-primary:hover,
+#BasketView #CheckProductsStage .product-amount form .btn-primary:focus {
+  background: #e5e5e5 !important;
+  border-color: #666 !important;
+  color: #666 !important;
+}
+#BasketView #CheckProductsStage .product-sum {
+  font-size: 20px;
+}
+#BasketView #CheckProductsStage .product-price {
+  color: grey;
+  font-size: 16px;
+}
+#BasketView #CheckProductsStage .trash-action {
+  cursor: pointer;
+  width: 3rem;
+  text-align: center;
+  color: #cb132f;
+}
+#BasketView #CheckProductsStage .trash-action:hover {
+  color: #9b1128;
+}
+#BasketView #CheckProductsStage #basket-summary {
+  margin-bottom: 0;
 }

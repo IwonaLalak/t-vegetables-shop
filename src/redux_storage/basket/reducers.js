@@ -4,6 +4,7 @@ const INITIAL = {
     arr: [
         {
             id: 2,
+            url:'https://www.vegetables.co.nz/assets/vegetables/_resampled/FillWyI0MDAiLCIzMDAiXQ/potatoes.png',
             name: 'Potatoes',
             per: 'kg',
             price: 1.89,
@@ -21,7 +22,7 @@ const basketReducer = (state = INITIAL, action) => {
                 return state
         }
         case types.REMOVE_FROM_BASKET: {
-            let arr = state.arr;
+            let arr = Array.from(state.arr);
             arr.splice(arr.indexOf(arr.find(i => i.id === action.id)), 1);
             return {arr}
         }

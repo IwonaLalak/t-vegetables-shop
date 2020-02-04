@@ -3,6 +3,15 @@ form {
   background: rgba(255, 255, 255, 0.5);
   padding: 15px;
 
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  input[type=number] {
+    -moz-appearance: textfield;
+  }
+
   label.form-label {
     span {
       display: inline-block;

@@ -77,9 +77,6 @@ class ProductItem extends React.Component {
     };
 
     changeQuantityInBasket = (quantity = this.state.quantity) => {
-
-        console.log('current value of quantity: ', quantity)
-
         if (Boolean(this.props.basketItem)) {
             this.props.changeQuantity(this.props.basketItem.id, quantity).then(() => {
                 console.log('changed quantity in basket')

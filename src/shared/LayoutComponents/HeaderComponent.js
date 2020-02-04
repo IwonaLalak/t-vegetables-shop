@@ -1,10 +1,11 @@
 import React from 'react';
-import {Nav, Navbar, Container, Row, Col} from "react-bootstrap";
+import {Nav, Navbar, Container, Row, Col, Badge} from "react-bootstrap";
 import {Basket, Home, Panel} from "../../_utilities/icons/FontAwesome";
 import {Link} from "react-router-dom";
+import {connect} from "react-redux";
 
 
-const HeaderComponent = (props) => {
+const HeaderComponent = ({basket}) => {
 
 
     return (
@@ -25,11 +26,11 @@ const HeaderComponent = (props) => {
                                     </Nav.Link>
                                     <Nav.Link>
                                         <Link to={'/basket'}>
-                                            <Basket/> Basket</Link>
+                                            <Basket/> Basket <Badge variant={'secondary'}>{basket.length}</Badge></Link>
                                     </Nav.Link>
                                     <Nav.Link>
                                         <Link to={'/manage'}>
-                                        <Panel/> Panel
+                                            <Panel/> Panel
                                         </Link>
                                     </Nav.Link>
                                 </Nav>
@@ -44,4 +45,8 @@ const HeaderComponent = (props) => {
 
 }
 
-export default HeaderComponent;
+const mapStateToProps = state => ({
+    basket: state.basket.arr
+});
+
+export default connect(mapStateToProps)(HeaderComponent);
