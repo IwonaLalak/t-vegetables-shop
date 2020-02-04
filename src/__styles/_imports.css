@@ -156,9 +156,56 @@ table {
   padding: 15px;
   margin-top: 15px;
 }
+table th,
+table td {
+  border: none !important;
+}
 .clearfix {
   clear: both;
   content: ' ';
+}
+#Stepper ul {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#Stepper ul li {
+  display: block;
+}
+#Stepper ul li.step-item {
+  cursor: pointer;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  min-width: 120px;
+  min-height: 120px;
+  padding: 30px 15px;
+  color: rgba(0, 47, 95, 0.4);
+}
+#Stepper ul li.step-item h1 {
+  font-size: 1.5rem;
+}
+#Stepper ul li.step-item h2 {
+  font-size: 1.1rem;
+}
+#Stepper ul li.step-item.active {
+  color: #002f5f;
+}
+#Stepper ul li.step-line {
+  height: 0;
+  width: 15%;
+  border: 0.5px solid rgba(0, 0, 0, 0.1);
+}
+#Stepper ul li.step-line:last-of-type {
+  display: none;
+}
+#Stepper #button-container {
+  margin-top: 15px;
+  border-top: 0.5px solid rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
 }
 #HeaderComponent {
   background: #002f5f;
@@ -224,6 +271,7 @@ table {
 }
 #ProductGrid #ProductItem .card {
   text-align: center;
+  border: none;
 }
 #ProductGrid #ProductItem .card img {
   width: 60%;

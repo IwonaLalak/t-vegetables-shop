@@ -1,6 +1,6 @@
 import * as React from "react";
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
-import {faShoppingBasket, faCheck, faCartPlus, faTachometerAlt, faHome, faPlus, faMinus, faTimes, faSave, faEdit, faTrash, faImage, faBahai, faSearch} from '@fortawesome/free-solid-svg-icons'
+import {faShoppingBasket, faCheck, faCartPlus, faTachometerAlt, faHome, faPlus, faMinus, faTimes, faSave, faEdit, faTrash, faImage, faBahai, faSearch, faAngleLeft, faAngleRight} from '@fortawesome/free-solid-svg-icons'
 
 
 export const Spin = () => {
@@ -44,6 +44,12 @@ export const Edit = () => {
 };
 export const Trash = () => {
     return <FontAwesomeIcon icon={faTrash}/>
+};
+export const ArrowLeft = () => {
+    return <FontAwesomeIcon icon={faAngleLeft}/>
+};
+export const ArrowRight = () => {
+    return <FontAwesomeIcon icon={faAngleRight}/>
 };
 
 

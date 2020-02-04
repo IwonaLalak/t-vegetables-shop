@@ -5,6 +5,7 @@
 }
 #ProductGrid #ProductItem .card {
   text-align: center;
+  border: none;
 }
 #ProductGrid #ProductItem .card img {
   width: 60%;

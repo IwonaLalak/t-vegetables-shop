@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import {connect} from "react-redux";
-import Stepper from "./components/Stepper";
+import Stepper from "../../shared/Stepper/Stepper";
 import CheckProducts from "./components/stages/CheckProducts";
 import FillOrderForm from "./components/stages/FillOrderForm";
 import MakePayment from "./components/stages/MakePayment";
@@ -59,15 +59,15 @@ class BasketView extends React.Component {
 
         const stages = [
             {
-                step: 1, content: <CheckProducts basket={basket}
+                step: 1, title:'step 1', subtitle:'check products',content: <CheckProducts basket={basket}
                                                  handleClickRemove={this.onClickRemove}
                                                  handleChangeQuantity={this.onChangeQuantity}
                                                  handleDecrease={this.onDecrease}
                                                  handleIncrease={this.onIncrease}
                 />
             },
-            {step: 2, content: <FillOrderForm/>},
-            {step: 3, content: <MakePayment/>},
+            {step: 2, title:'step 2', subtitle:'fill order form',content: <FillOrderForm/>},
+            {step: 3, title:'step 3', subtitle:'make payment',content: <MakePayment/>},
         ];
 
         return (

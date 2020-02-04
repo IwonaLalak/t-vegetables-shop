@@ -4,7 +4,7 @@ import {Button, ButtonToolbar} from "react-bootstrap";
 import {Trash, Edit, Save, Times} from "../../_utilities/icons/FontAwesome";
 
 export const ActionButton = props => {
-    let {icon, text, theme, size, type, disabled, onClick} = props;
+    let {icon, isIconRight, text, theme, size, type, disabled, onClick} = props;
     return (
         <Button
             onClick={onClick}
@@ -14,10 +14,13 @@ export const ActionButton = props => {
             disabled={disabled}
         >
             {
-                Boolean(icon) && <span style={Boolean(text) ? {marginRight: '10px'} : {}}>{icon}</span>
+                (!isIconRight && Boolean(icon)) && <span style={Boolean(text) ? {marginRight: '10px'} : {}}>{icon}</span>
             }
             {
                 Boolean(text) && text
+            }
+            {
+                (isIconRight && Boolean(icon)) && <span style={Boolean(text) ? {marginLeft: '10px'} : {}}>{icon}</span>
             }
         </Button>
     );
@@ -25,6 +28,7 @@ export const ActionButton = props => {
 
 ActionButton.propTypes = {
     icon: PropTypes.any,
+    isIconRight:PropTypes.bool,
     text: PropTypes.string,
     theme: PropTypes.oneOf(['primary', 'secondary', 'success', 'warning', 'danger', 'info', 'light', 'dark']),
     size: PropTypes.oneOf(['sm', 'lg']),
@@ -39,6 +43,7 @@ ActionButton.defaultProps = {
     type: 'button',
     size: '',
     disabled: false,
+    isIconRight: false,
 };
 
 
