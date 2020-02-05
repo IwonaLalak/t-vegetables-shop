@@ -34,7 +34,8 @@ ActionButton.propTypes = {
     size: PropTypes.oneOf(['sm', 'lg']),
     type: PropTypes.oneOf(['button', 'submit']),
     disabled: PropTypes.bool,
-    onClick: PropTypes.func
+    onClick: PropTypes.func,
+    onSubmit: PropTypes.func
 
 };
 

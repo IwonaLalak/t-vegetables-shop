@@ -3,10 +3,10 @@ import BasketTable from "./CheckProductsComponents/BasketTable";
 import BasketTableRow from "./CheckProductsComponents/BasketTableRow";
 import BasketTableSummary from "./CheckProductsComponents/BasketTableSummary";
 
-const CheckProducts = ({basket,handleClickRemove,handleChangeQuantity,handleDecrease,handleIncrease}) => {
+const CheckProductsStage = ({basket,handleClickRemove,handleChangeQuantity,handleDecrease,handleIncrease}) => {
     return (
         <div id={'CheckProductsStage'}>
-            <h2>Please check products in your basket</h2>
+            <h3 className={'stage-title'}>Please check products in your basket</h3>
             <BasketTable>
                 {
                     basket.map(item=><BasketTableRow item={item}
@@ -21,4 +21,4 @@ const CheckProducts = ({basket,handleClickRemove,handleChangeQuantity,handleDecr
     );
 };
 
-export default CheckProducts;
+export default CheckProductsStage;

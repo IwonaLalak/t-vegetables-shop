@@ -1,20 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f2dcb656-23ba-4ecb-aa56-370cb7af6755" name="Default" comment="stages, stage check producs">
-      <change afterPath="$PROJECT_DIR$/src/__styles/components/Stepper.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/__styles/components/Stepper.less" afterDir="false" />
+    <list default="true" id="f2dcb656-23ba-4ecb-aa56-370cb7af6755" name="Default" comment="stepper">
+      <change afterPath="$PROJECT_DIR$/src/shared/Forms/Formcheck.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/BasketView/components/stages/FillOrderFormStage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/__styles/_imports.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/__styles/_imports.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/__styles/_imports.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/__styles/_imports.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/__styles/components/ProductGrid.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/__styles/components/ProductGrid.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/__styles/components/ProductGrid.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/__styles/components/ProductGrid.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/__styles/components/tables.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/__styles/components/tables.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/__styles/components/tables.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/__styles/components/tables.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_utilities/icons/FontAwesome.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/_utilities/icons/FontAwesome.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/__styles/components/BasketView.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/__styles/components/BasketView.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/__styles/components/BasketView.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/__styles/components/BasketView.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/__styles/components/forms.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/__styles/components/forms.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/__styles/components/forms.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/__styles/components/forms.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_consts/models/models.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/_consts/models/models.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_utilities/validators/YupValidators.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/_utilities/validators/YupValidators.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/shared/Buttons/Buttons.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/shared/Buttons/Buttons.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/BasketView/BasketView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/BasketView/BasketView.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/BasketView/components/Stepper.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/shared/Stepper/Stepper.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/BasketView/components/stages/CheckProducts.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/BasketView/components/stages/CheckProductsStage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/BasketView/components/stages/FillOrderForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/BasketView/components/stages/FillOrderComponents/FillOrderForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/BasketView/components/stages/MakePayment.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/BasketView/components/stages/MakePaymentStage.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,7 +114,11 @@
       <workItem from="1580369064569" duration="4531000" />
       <workItem from="1580453817590" duration="11236000" />
       <workItem from="1580713509790" duration="7592000" />
-      <workItem from="1580801210489" duration="15649000" />
+      <workItem from="1580801210489" duration="16302000" />
+      <workItem from="1580888377732" duration="5510000" />
+      <workItem from="1580901872414" duration="232000" />
+      <workItem from="1580902118003" duration="771000" />
+      <workItem from="1580903176060" duration="10466000" />
     </task>
     <task id="LOCAL-00001" summary="wrapper, footer">
       <created>1579528309136</created>
@@ -275,7 +281,14 @@
       <option name="project" value="LOCAL" />
       <updated>1580818836154</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="stepper">
+      <created>1580827055551</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1580827055551</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -305,17 +318,22 @@
     <MESSAGE value="basket actions" />
     <MESSAGE value="update" />
     <MESSAGE value="stages, stage check producs" />
-    <option name="LAST_COMMIT_MESSAGE" value="stages, stage check producs" />
+    <MESSAGE value="stepper" />
+    <option name="LAST_COMMIT_MESSAGE" value="stepper" />
   </component>
   <component name="WindowStateProjectService">
     <state x="712" y="218" width="476" height="621" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1579688024470">
       <screen x="0" y="0" width="1920" height="1037" />
     </state>
     <state x="712" y="218" width="476" height="621" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1037/1920.0.1920.1080@0.0.1920.1037" timestamp="1579688024470" />
-    <state x="595" y="116" width="720" height="815" key="CommitChangelistDialog2" timestamp="1580818835952">
+    <state x="693" y="268" width="524" height="511" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1580912928432">
       <screen x="0" y="0" width="1920" height="1037" />
     </state>
-    <state x="595" y="116" width="720" height="815" key="CommitChangelistDialog2/0.0.1920.1037/1920.0.1920.1080@0.0.1920.1037" timestamp="1580818835952" />
+    <state x="693" y="268" width="524" height="511" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1037/1920.0.1920.1080@0.0.1920.1037" timestamp="1580912928432" />
+    <state x="595" y="116" width="720" height="815" key="CommitChangelistDialog2" timestamp="1580827055368">
+      <screen x="0" y="0" width="1920" height="1037" />
+    </state>
+    <state x="595" y="116" width="720" height="815" key="CommitChangelistDialog2/0.0.1920.1037/1920.0.1920.1080@0.0.1920.1037" timestamp="1580827055368" />
     <state x="543" y="256" width="824" height="535" key="IDE.errors.dialog" timestamp="1579686581368">
       <screen x="0" y="0" width="1920" height="1037" />
     </state>
@@ -324,14 +342,22 @@
       <screen x="0" y="0" width="1920" height="1037" />
     </state>
     <state x="464" y="153" width="1425" height="740" key="SettingsEditor/0.0.1920.1037/1920.0.1920.1080@0.0.1920.1037" timestamp="1580210605440" />
-    <state x="555" y="254" width="800" height="538" key="Vcs.Push.Dialog.v2" timestamp="1580818837513">
+    <state x="555" y="254" width="800" height="538" key="Vcs.Push.Dialog.v2" timestamp="1580827056543">
       <screen x="0" y="0" width="1920" height="1037" />
     </state>
-    <state x="555" y="254" width="800" height="538" key="Vcs.Push.Dialog.v2/0.0.1920.1037/1920.0.1920.1080@0.0.1920.1037" timestamp="1580818837513" />
+    <state x="555" y="254" width="800" height="538" key="Vcs.Push.Dialog.v2/0.0.1920.1037/1920.0.1920.1080@0.0.1920.1037" timestamp="1580827056543" />
     <state x="100" y="100" width="1720" height="837" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1580480560823">
       <screen x="0" y="0" width="1920" height="1037" />
     </state>
     <state x="100" y="100" width="1720" height="837" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1920.1037/1920.0.1920.1080@0.0.1920.1037" timestamp="1580480560823" />
+    <state x="2039" y="53" width="1484" height="942" key="dock-window-1" timestamp="1580903250774">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2039" y="53" width="1484" height="942" key="dock-window-1/0.0.1920.1037/1920.0.1920.1080@0.0.1920.1037" timestamp="1580903250774" />
+    <state x="653" y="253" width="628" height="530" key="find.popup" timestamp="1580913356420">
+      <screen x="0" y="0" width="1920" height="1037" />
+    </state>
+    <state x="653" y="253" width="628" height="530" key="find.popup/0.0.1920.1037/1920.0.1920.1080@0.0.1920.1037" timestamp="1580913356420" />
     <state x="623" y="228" width="672" height="678" key="search.everywhere.popup" timestamp="1579702789078">
       <screen x="0" y="0" width="1920" height="1037" />
     </state>

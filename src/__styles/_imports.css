@@ -103,10 +103,19 @@ form input::-webkit-inner-spin-button {
 form input[type=number] {
   -moz-appearance: textfield;
 }
+form h6 {
+  color: rgba(0, 0, 0, 0.4);
+  font-style: italic;
+  margin-top: 15px;
+  font-size: 14px;
+}
+form h6:first-of-type {
+  margin-top: 0;
+}
 form label.form-label span {
   display: inline-block;
 }
-form label.form-label span:nth-of-type(2) {
+form .form-group .err {
   color: rgba(203, 19, 47, 0.8);
   font-style: italic;
   font-weight: normal;
@@ -119,6 +128,11 @@ form .form-control {
 form .form-control.inp-err {
   border-color: rgba(203, 19, 47, 0.5);
   box-shadow: 0 0 0 0.1rem rgba(203, 19, 47, 0.3);
+}
+form .form-check.inp-err input[type="checkbox"] {
+  border-color: rgba(203, 19, 47, 0.9);
+  box-shadow: 0 0 0 0.1rem rgba(203, 19, 47, 0.6);
+  background: red;
 }
 form #ImageFormContainer {
   margin-top: 32px;
@@ -332,12 +346,17 @@ table td {
 #ManageView .btn-close:hover {
   color: #9b1128;
 }
+#BasketView .stage-title {
+  color: #ff3156;
+  margin-top: 45px;
+}
 #BasketView #CheckProductsStage td {
   font-size: 18px;
   vertical-align: middle;
 }
 #BasketView #CheckProductsStage .product-image {
-  width: 9rem;
+  width: 7rem;
+  max-height: 6rem;
 }
 #BasketView #CheckProductsStage .product-name {
   font-size: 20px;

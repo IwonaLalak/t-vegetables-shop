@@ -1,6 +1,6 @@
 import React from 'react';
 
-const MakePayment = () => {
+const MakePaymentStage = () => {
     return (
         <div>
             stage 3 - make payment
@@ -8,4 +8,4 @@ const MakePayment = () => {
     );
 };
 
-export default MakePayment;
+export default MakePaymentStage;

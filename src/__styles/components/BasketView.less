@@ -1,6 +1,12 @@
 @import "../_variables";
 
 #BasketView {
+
+  .stage-title {
+    color: @accent-color;
+    margin-top: 45px;
+  }
+
   #CheckProductsStage {
     td {
       font-size: 18px;
@@ -8,7 +14,8 @@
     }
 
     .product-image {
-      width: 9rem;
+      width: 7rem;
+      max-height: 6rem;
     }
 
     .product-name {
@@ -66,5 +73,9 @@
     #basket-summary {
       margin-bottom: 0;
     }
+  }
+
+  #FillOrderStage{
+
   }
 }

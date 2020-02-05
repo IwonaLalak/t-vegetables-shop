@@ -1,21 +1,24 @@
 import React, {Component} from 'react'
 import {connect} from "react-redux";
 import Stepper from "../../shared/Stepper/Stepper";
-import CheckProducts from "./components/stages/CheckProducts";
-import FillOrderForm from "./components/stages/FillOrderForm";
-import MakePayment from "./components/stages/MakePayment";
+import CheckProductsStage from "./components/stages/CheckProductsStage";
+import FillOrderFormStage from "./components/stages/FillOrderFormStage";
+import MakePaymentStage from "./components/stages/MakePaymentStage";
 import {changeQuantity, removeFromBasket} from "../../redux_storage/basket/operations";
+import {orderModel} from "../../_consts/models/models";
 
 class BasketView extends React.Component {
 
     state = {
         active: 1,
-        basket: []
+        basket: [],
+        order: null,
     };
 
     componentDidMount() {
         this.setState({
-            basket: this.props.basket
+            basket: this.props.basket,
+            order: orderModel()
         })
     }
 
@@ -23,8 +26,8 @@ class BasketView extends React.Component {
     onClickRemove = item => {
         this.props.removeFromBasket(item.id).then(() =>
             this.setState({
-            basket: this.props.basket
-        }))
+                basket: this.props.basket
+            }))
     };
 
     onChangeQuantity = (item, value) => {
@@ -53,28 +56,37 @@ class BasketView extends React.Component {
         })
     }
 
+    handleSubmitOrderForm = (order) => {
+        this.setState({order})
+    };
+
     render() {
 
-        let {basket} = this.state;
+        let {active, basket, order} = this.state;
 
         const stages = [
             {
-                step: 1, title:'step 1', subtitle:'check products',content: <CheckProducts basket={basket}
-                                                 handleClickRemove={this.onClickRemove}
-                                                 handleChangeQuantity={this.onChangeQuantity}
-                                                 handleDecrease={this.onDecrease}
-                                                 handleIncrease={this.onIncrease}
+                step: 1, title: 'step 1', subtitle: 'check products', content: <CheckProductsStage basket={basket}
+                                                                                                   handleClickRemove={this.onClickRemove}
+                                                                                                   handleChangeQuantity={this.onChangeQuantity}
+                                                                                                   handleDecrease={this.onDecrease}
+                                                                                                   handleIncrease={this.onIncrease}
                 />
             },
-            {step: 2, title:'step 2', subtitle:'fill order form',content: <FillOrderForm/>},
-            {step: 3, title:'step 3', subtitle:'make payment',content: <MakePayment/>},
+            {
+                step: 2,
+                title: 'step 2',
+                subtitle: 'fill order form',
+                content: <FillOrderFormStage order={order} handleSubmitOrderForm={this.handleSubmitOrderForm}/>
+            },
+            {step: 3, title: 'step 3', subtitle: 'make payment', content: <MakePaymentStage/>},
         ];
 
         return (
             <div id={'BasketView'}>
                 <Stepper stages={stages}
                          handleClickStep={(active) => this.setState({active})}
-                         active={this.state.active}
+                         active={active}
                 />
             </div>
         )

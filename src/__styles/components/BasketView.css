@@ -5,12 +5,17 @@
   font-display: swap;
   src: local('ZCOOL QingKe HuangYou Regular'), local('ZCOOLQingKeHuangYou-Regular'), url(https://fonts.gstatic.com/s/zcoolqingkehuangyou/v5/2Eb5L_R5IXJEWhD3AOhSvFC554MOOahI4mR4jPe4.ttf) format('truetype');
 }
+#BasketView .stage-title {
+  color: #ff3156;
+  margin-top: 45px;
+}
 #BasketView #CheckProductsStage td {
   font-size: 18px;
   vertical-align: middle;
 }
 #BasketView #CheckProductsStage .product-image {
-  width: 9rem;
+  width: 7rem;
+  max-height: 6rem;
 }
 #BasketView #CheckProductsStage .product-name {
   font-size: 20px;
