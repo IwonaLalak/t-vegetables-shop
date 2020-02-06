@@ -5,16 +5,12 @@ import Formfield from "../../../../../shared/Forms/Formfield";
 import Formcheck from "../../../../../shared/Forms/Formcheck";
 import {orderSchema} from "../../../../../_utilities/validators/YupValidators";
 import {ActionButton} from "../../../../../shared/Buttons/Buttons";
-import {Check} from "../../../../../_utilities/icons/FontAwesome";
+import {Check, Save} from "../../../../../_utilities/icons/FontAwesome";
 
-const FillOrderForm = ({order, handleSubmitOrderForm}) => {
+const FillOrderForm = ({order, confirmedData, handleSubmitOrderForm, handleChangeForm}) => {
 
     const onSubmit = (values) => {
         handleSubmitOrderForm(values)
-    };
-
-    const handleChangeForm = (e, a) => {
-        //    console.log('handle change form', e, a)
     };
 
     const validationSchema = orderSchema();
@@ -147,13 +143,17 @@ const FillOrderForm = ({order, handleSubmitOrderForm}) => {
                             </Row>
                             <Row>
                                 <Col xs={12}>
-                                    <ActionButton
-                                        type={'button'}
-                                        text={'Confirm data'}
-                                        icon={<Check/>}
-                                        theme={'secondary'}
-                                        onClick={formik.handleSubmit}
-                                    />
+                                    {
+                                        Boolean(confirmedData) &&
+                                        <ActionButton
+                                            type={'button'}
+                                            theme={'secondary'}
+                                            text={confirmedData.label}
+                                            icon={confirmedData.status > 0 ? <Check/> : <Save/>}
+                                            disabled={confirmedData.status > 0}
+                                            onClick={formik.handleSubmit}
+                                        />
+                                    }
                                 </Col>
                             </Row>
                         </Form>
