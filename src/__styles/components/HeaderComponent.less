@@ -1,33 +1,38 @@
 @import "../_variables";
 
 #HeaderComponent {
-  background: @bg-color-nav;
+  background: @primary-color;
   position: fixed;
   width: 100%;
   z-index: 9999;
 
   nav {
     .navbar-brand {
-      color: @secondary-color;
+      color: #eee;
       font-size: 24px;
       text-shadow: 1px 1px 3px @primary-color-darkest;
     }
 
     a {
       transition: all ease 0.3s;
-      color: @font-color-nav;
+      color: #eee;
       font-size: 18px;
 
       &:hover {
-        color: @font-color-nav-secondary;
+        color: @accent-color;
         text-decoration: none;
       }
     }
 
     a.nav-link {
+      display: block;
       &:hover {
         background-color: rgba(0, 0, 0, 0.2)
       }
+    }
+
+    .badge{
+      background: @accent-color-darker;
     }
 
   }

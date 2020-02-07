@@ -35,8 +35,8 @@
 }
 .btn.btn-secondary:hover,
 .btn.btn-secondary:active {
-  background: #cf3762 !important;
-  border-color: #cf3762 !important;
+  background: #e63156 !important;
+  border-color: #e63156 !important;
 }
 .btn.btn-info {
   background: #1ec8d7;
@@ -228,7 +228,7 @@ table td {
   z-index: 9999;
 }
 #HeaderComponent nav .navbar-brand {
-  color: #dbff9a;
+  color: #eee;
   font-size: 24px;
   text-shadow: 1px 1px 3px #001b37;
 }
@@ -238,11 +238,17 @@ table td {
   font-size: 18px;
 }
 #HeaderComponent nav a:hover {
-  color: #dbff9a;
+  color: #ff3156;
   text-decoration: none;
+}
+#HeaderComponent nav a.nav-link {
+  display: block;
 }
 #HeaderComponent nav a.nav-link:hover {
   background-color: rgba(0, 0, 0, 0.2);
+}
+#HeaderComponent nav .badge {
+  background: #e63156;
 }
 #WrapperComponent {
   padding: 75px 0 25px 0;
@@ -275,7 +281,7 @@ table td {
   transition: all ease 0.3s;
 }
 #FooterComponent a:hover {
-  color: #dbff9a;
+  color: #ff3156;
   text-decoration: none;
 }
 #ProductGrid #ProductItem {
@@ -353,6 +359,9 @@ table td {
 #BasketView .stage-card {
   background: rgba(255, 255, 255, 0.5);
   padding: 15px;
+}
+#BasketView .handle-error {
+  margin-top: 25px;
 }
 #BasketView #CheckProductsStage td {
   font-size: 18px;

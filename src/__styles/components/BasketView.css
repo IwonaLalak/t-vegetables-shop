@@ -13,6 +13,9 @@
   background: rgba(255, 255, 255, 0.5);
   padding: 15px;
 }
+#BasketView .handle-error {
+  margin-top: 25px;
+}
 #BasketView #CheckProductsStage td {
   font-size: 18px;
   vertical-align: middle;

@@ -12,7 +12,7 @@
   z-index: 9999;
 }
 #HeaderComponent nav .navbar-brand {
-  color: #dbff9a;
+  color: #eee;
   font-size: 24px;
   text-shadow: 1px 1px 3px #001b37;
 }
@@ -22,9 +22,15 @@
   font-size: 18px;
 }
 #HeaderComponent nav a:hover {
-  color: #dbff9a;
+  color: #ff3156;
   text-decoration: none;
+}
+#HeaderComponent nav a.nav-link {
+  display: block;
 }
 #HeaderComponent nav a.nav-link:hover {
   background-color: rgba(0, 0, 0, 0.2);
+}
+#HeaderComponent nav .badge {
+  background: #e63156;
 }
