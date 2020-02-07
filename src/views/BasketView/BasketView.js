@@ -79,6 +79,10 @@ class BasketView extends React.Component {
         })
     };
 
+    handleClearStore = () => {
+
+    };
+
     render() {
 
         let {active, basket, order, confirmedData} = this.state;
@@ -105,7 +109,12 @@ class BasketView extends React.Component {
                                              handleChangeForm={this.handleChangeForm}
                 />
             },
-            {step: 3, title: 'step 3', subtitle: 'make payment', content: <MakePaymentStage/>},
+            {
+                step: 3,
+                title: 'step 3',
+                subtitle: 'make payment',
+                content: <MakePaymentStage basket={basket} handleClearStore={this.handleClearStore}/>
+            },
         ];
 
         return (

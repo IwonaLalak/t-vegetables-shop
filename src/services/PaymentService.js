@@ -2,7 +2,7 @@ export default {
 
     makeFakePayment() {
         return new Promise(resolve => {
-            setTimeout(resolve, 3000);
+            setTimeout(()=>resolve('success'), 3000);
         });
     }
 

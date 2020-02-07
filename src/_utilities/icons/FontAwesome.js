@@ -1,10 +1,35 @@
 import * as React from "react";
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
-import {faShoppingBasket, faCheck, faCartPlus, faTachometerAlt, faHome, faPlus, faMinus, faTimes, faSave, faEdit, faTrash, faImage, faBahai, faSearch, faAngleLeft, faAngleRight} from '@fortawesome/free-solid-svg-icons'
+import {
+    faShoppingBasket,
+    faCheck,
+    faCartPlus,
+    faTachometerAlt,
+    faHome,
+    faPlus,
+    faMinus,
+    faTimes,
+    faSave,
+    faEdit,
+    faTrash,
+    faImage,
+    faBahai,
+    faSearch,
+    faAngleLeft,
+    faAngleRight,
+    faMoneyBillWave,
+    faTruck
+} from '@fortawesome/free-solid-svg-icons'
 
 
 export const Spin = () => {
     return <FontAwesomeIcon icon={faBahai} spin={true}/>
+};
+export const Money = () => {
+    return <FontAwesomeIcon icon={faMoneyBillWave}/>
+};
+export const Truck = () => {
+    return <FontAwesomeIcon icon={faTruck}/>
 };
 export const Home = () => {
     return <FontAwesomeIcon icon={faHome}/>

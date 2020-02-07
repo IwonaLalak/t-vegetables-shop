@@ -62,3 +62,6 @@
 #BasketView #CheckProductsStage #basket-summary {
   margin-bottom: 0;
 }
+#BasketView #MakePaymentStage h6 {
+  margin-bottom: 15px;
+}
