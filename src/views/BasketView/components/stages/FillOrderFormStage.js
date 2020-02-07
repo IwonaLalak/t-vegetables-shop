@@ -1,5 +1,7 @@
 import React from 'react';
 import FillOrderForm from "./FillOrderComponents/FillOrderForm";
+import withNoProducts from "../../../../shared/hoc/withNoProducts";
+import {compose} from "recompose";
 
 const FillOrderFormStage = ({order, confirmedData, handleSubmitOrderForm, handleChangeForm}) => {
     return (
@@ -16,4 +18,4 @@ const FillOrderFormStage = ({order, confirmedData, handleSubmitOrderForm, handle
     );
 };
 
-export default FillOrderFormStage;
+export default compose(withNoProducts)(FillOrderFormStage);

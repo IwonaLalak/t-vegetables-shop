@@ -87,7 +87,7 @@ class BasketView extends React.Component {
                 this.props.resetOrder()
             ]
         ).then(() => {
-            setTimeout(()=>this.props.history.push('/'),3000);
+            setTimeout(() => this.props.history.push('/'), 3000);
         })
     };
 
@@ -101,6 +101,7 @@ class BasketView extends React.Component {
                 title: 'step 1',
                 subtitle: 'check products',
                 content: <CheckProductsStage basket={basket}
+                                             noProducts={basket.length === 0}
                                              handleClickRemove={this.onClickRemove}
                                              handleChangeQuantity={this.onChangeQuantity}
                                              handleDecrease={this.onDecrease}
@@ -112,6 +113,7 @@ class BasketView extends React.Component {
                 title: 'step 2',
                 subtitle: 'fill order form',
                 content: <FillOrderFormStage order={order}
+                                             noProducts={basket.length === 0}
                                              confirmedData={confirmedData}
                                              handleSubmitOrderForm={this.handleSubmitOrderForm}
                                              handleChangeForm={this.handleChangeForm}
@@ -121,7 +123,10 @@ class BasketView extends React.Component {
                 step: 3,
                 title: 'step 3',
                 subtitle: 'make payment',
-                content: <MakePaymentStage basket={basket} handleClearStore={this.handleClearStore}/>
+                content: <MakePaymentStage basket={basket}
+                                           noProducts={basket.length === 0}
+                                           noOrder={Boolean(order)? !order.agreement : true}
+                                           handleClearStore={this.handleClearStore}/>
             },
         ];
 

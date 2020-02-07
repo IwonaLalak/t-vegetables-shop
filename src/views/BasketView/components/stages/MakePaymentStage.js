@@ -6,6 +6,9 @@ import {formatMoney} from "../../../../_utilities/formaters/money";
 import {countPriceSum} from "../../../../_utilities/operations/numberOperations";
 import PaymentService from "../../../../services/PaymentService";
 import Loader from "../../../../shared/Loader/Loader";
+import {compose} from "recompose";
+import withNoOrder from "../../../../shared/hoc/withNoOrder";
+import withNoProducts from "../../../../shared/hoc/withNoProducts";
 
 class MakePaymentStage extends React.Component {
     state = {
@@ -42,6 +45,7 @@ class MakePaymentStage extends React.Component {
         return (
             <div id={'MakePaymentStage'}>
                 <h3 className={'stage-title'}>Make payment via TestPay</h3>
+
                 <div className={'stage-card'}>
                     <Row>
                         <Col lg={6}>
@@ -114,4 +118,4 @@ class MakePaymentStage extends React.Component {
     }
 }
 
-export default MakePaymentStage;
+export default compose(withNoProducts,withNoOrder)(MakePaymentStage);

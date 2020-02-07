@@ -2,6 +2,8 @@ import React from 'react';
 import BasketTable from "./CheckProductsComponents/BasketTable";
 import BasketTableRow from "./CheckProductsComponents/BasketTableRow";
 import BasketTableSummary from "./CheckProductsComponents/BasketTableSummary";
+import withNoProducts from "../../../../shared/hoc/withNoProducts";
+import {compose} from "recompose";
 
 const CheckProductsStage = ({basket,handleClickRemove,handleChangeQuantity,handleDecrease,handleIncrease}) => {
     return (
@@ -21,4 +23,4 @@ const CheckProductsStage = ({basket,handleClickRemove,handleChangeQuantity,handl
     );
 };
 
-export default CheckProductsStage;
+export default compose(withNoProducts)(CheckProductsStage);
