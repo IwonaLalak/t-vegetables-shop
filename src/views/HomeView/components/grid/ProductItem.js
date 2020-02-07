@@ -70,7 +70,6 @@ class ProductItem extends React.Component {
             this.props.addToBasket(
                 Object.assign(this.props.item, {quantity: this.state.quantity})
             ).then(() => {
-                console.log('added to basket')
                 this.setState({inBasket: true})
             })
         }
@@ -93,7 +92,6 @@ class ProductItem extends React.Component {
     onClickRemove = () => {
         if (Boolean(this.props.basketItem))
             this.props.removeFromBasket(this.props.basketItem.id).then(() => {
-                console.log('removed from basket')
                 this.setState({
                     inBasket: false,
                     quantity: 1

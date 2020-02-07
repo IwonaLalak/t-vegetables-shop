@@ -17,10 +17,12 @@ class MakePaymentStage extends React.Component {
         this.setState({isLoading: true})
         PaymentService.makeFakePayment()
             .then(response => {
+
                 this.setState({
                     isLoading: false,
                     response: response
                 })
+
                 this.props.handleClearStore()
 
             })
@@ -65,7 +67,7 @@ class MakePaymentStage extends React.Component {
                                         Free delivery
                                     </td>
                                     <td>
-                                        $ 0
+                                        {formatMoney(0)}
                                     </td>
                                 </tr>
                                 <tr className={'font-weight-bolder'}>
@@ -84,25 +86,25 @@ class MakePaymentStage extends React.Component {
                         </Col>
                         <Col lg={6}>
                             <h6 className={'d-flex justify-content-center'}>Make a payment</h6>
-                            <div className={'d-flex justify-content-center'}>
+                            <div className={'d-flex justify-content-center flex-wrap'}>
                                 {
                                     isLoading ?
                                         <Loader/>
                                         :
                                         Boolean(response) ?
-                                            <Alert variant={response}>
-                                                {response === 'success' ? 'Payment was successful. Your order is being processed.' : 'Payment failed. Please contact support.'}
-                                            </Alert>
+                                            <>
+                                                <Alert variant={response}>
+                                                    {response === 'success' ? 'Payment was successful. Your order is being processed.' : 'Payment failed. Please contact support.'}
+                                                </Alert>
+                                                <h6>You will be redirect in few seconds...</h6>
+                                            </>
                                             :
                                             <ActionButton theme={'primary'}
                                                           text={'Click here to pay'}
                                                           size={'lg'}
                                                           icon={<Money/>}
                                                           onClick={this.onClickPay}/>
-
-
                                 }
-
                             </div>
                         </Col>
                     </Row>

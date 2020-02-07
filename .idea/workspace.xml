@@ -1,17 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f2dcb656-23ba-4ecb-aa56-370cb7af6755" name="Default" comment="make payment stage loader">
-      <change afterPath="$PROJECT_DIR$/src/_utilities/operations/numberOperations.js" afterDir="false" />
+    <list default="true" id="f2dcb656-23ba-4ecb-aa56-370cb7af6755" name="Default" comment="make payment stage">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/__styles/_imports.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/__styles/_imports.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/__styles/components/BasketView.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/__styles/components/BasketView.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/__styles/components/BasketView.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/__styles/components/BasketView.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_utilities/icons/FontAwesome.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/_utilities/icons/FontAwesome.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/PaymentService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/PaymentService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux_storage/basket/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux_storage/basket/actions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux_storage/basket/operations.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux_storage/basket/operations.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux_storage/basket/reducers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux_storage/basket/reducers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux_storage/basket/types.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux_storage/basket/types.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux_storage/order/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux_storage/order/actions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux_storage/order/operations.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux_storage/order/operations.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux_storage/order/reducers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux_storage/order/reducers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux_storage/order/types.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux_storage/order/types.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/BasketView/BasketView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/BasketView/BasketView.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/BasketView/components/stages/CheckProductsComponents/BasketTableSummary.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/BasketView/components/stages/CheckProductsComponents/BasketTableSummary.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/BasketView/components/stages/MakePaymentStage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/BasketView/components/stages/MakePaymentStage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/HomeView/components/grid/ProductItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/HomeView/components/grid/ProductItem.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,7 +117,7 @@
       <workItem from="1580902118003" duration="771000" />
       <workItem from="1580903176060" duration="10670000" />
       <workItem from="1580975008647" duration="15653000" />
-      <workItem from="1581060451265" duration="7006000" />
+      <workItem from="1581060451265" duration="11041000" />
     </task>
     <task id="LOCAL-00001" summary="wrapper, footer">
       <created>1579528309136</created>
@@ -306,14 +308,20 @@
       <option name="project" value="LOCAL" />
       <updated>1581003498698</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="make payment stage">
+      <created>1581076193228</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1581076193228</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="stufff" />
     <MESSAGE value="css stuff, breadcrumbs" />
     <MESSAGE value="table" />
     <MESSAGE value="form" />
@@ -338,7 +346,8 @@
     <MESSAGE value="order form" />
     <MESSAGE value="order form redux storage" />
     <MESSAGE value="make payment stage loader" />
-    <option name="LAST_COMMIT_MESSAGE" value="make payment stage loader" />
+    <MESSAGE value="make payment stage" />
+    <option name="LAST_COMMIT_MESSAGE" value="make payment stage" />
   </component>
   <component name="WindowStateProjectService">
     <state x="712" y="218" width="476" height="621" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1579688024470">
@@ -349,10 +358,10 @@
       <screen x="0" y="0" width="1920" height="1037" />
     </state>
     <state x="693" y="268" width="524" height="511" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1037/1920.0.1920.1080@0.0.1920.1037" timestamp="1580912928432" />
-    <state x="595" y="116" width="720" height="815" key="CommitChangelistDialog2" timestamp="1581003498418">
+    <state x="595" y="116" width="720" height="815" key="CommitChangelistDialog2" timestamp="1581076193065">
       <screen x="0" y="0" width="1920" height="1037" />
     </state>
-    <state x="595" y="116" width="720" height="815" key="CommitChangelistDialog2/0.0.1920.1037/1920.0.1920.1080@0.0.1920.1037" timestamp="1581003498418" />
+    <state x="595" y="116" width="720" height="815" key="CommitChangelistDialog2/0.0.1920.1037/1920.0.1920.1080@0.0.1920.1037" timestamp="1581076193065" />
     <state x="543" y="256" width="824" height="535" key="IDE.errors.dialog" timestamp="1579686581368">
       <screen x="0" y="0" width="1920" height="1037" />
     </state>
@@ -361,10 +370,10 @@
       <screen x="0" y="0" width="1920" height="1037" />
     </state>
     <state x="464" y="153" width="1425" height="740" key="SettingsEditor/0.0.1920.1037/1920.0.1920.1080@0.0.1920.1037" timestamp="1580210605440" />
-    <state x="555" y="254" width="800" height="538" key="Vcs.Push.Dialog.v2" timestamp="1581003502046">
+    <state x="555" y="254" width="800" height="538" key="Vcs.Push.Dialog.v2" timestamp="1581076194585">
       <screen x="0" y="0" width="1920" height="1037" />
     </state>
-    <state x="555" y="254" width="800" height="538" key="Vcs.Push.Dialog.v2/0.0.1920.1037/1920.0.1920.1080@0.0.1920.1037" timestamp="1581003502046" />
+    <state x="555" y="254" width="800" height="538" key="Vcs.Push.Dialog.v2/0.0.1920.1037/1920.0.1920.1080@0.0.1920.1037" timestamp="1581076194585" />
     <state x="100" y="100" width="1720" height="837" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1580480560823">
       <screen x="0" y="0" width="1920" height="1037" />
     </state>
@@ -377,6 +386,10 @@
       <screen x="0" y="0" width="1920" height="1037" />
     </state>
     <state x="653" y="253" width="628" height="530" key="find.popup/0.0.1920.1037/1920.0.1920.1080@0.0.1920.1037" timestamp="1580913356420" />
+    <state x="624" y="234" key="run.anything.popup" timestamp="1581079073204">
+      <screen x="0" y="0" width="1920" height="1037" />
+    </state>
+    <state x="624" y="234" key="run.anything.popup/0.0.1920.1037/1920.0.1920.1080@0.0.1920.1037" timestamp="1581079073204" />
     <state x="623" y="228" width="672" height="678" key="search.everywhere.popup" timestamp="1579702789078">
       <screen x="0" y="0" width="1920" height="1037" />
     </state>

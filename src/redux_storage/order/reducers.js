@@ -6,10 +6,10 @@ const INITIAL = {
 
 const orderReducer = (state = INITIAL, action) => {
     switch (action.type) {
-        case types.SET_ORDER: {
-            console.log(action)
-            return {obj: action.obj}
-        }
+        case types.SET_ORDER:
+            return {obj: action.obj};
+        case types.RESET_ORDER:
+            return {obj: null};
         default:
             return state
     }

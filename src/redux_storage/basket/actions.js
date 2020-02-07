@@ -12,4 +12,8 @@ const changeQuantity = (id, quantity) => ({
     type: types.CHANGE_QUANTITY_IN_BASKET, id, quantity
 });
 
-export default {add, remove, changeQuantity}
+const reset = () => ({
+    type: types.RESET_BASKET,
+});
+
+export default {add, remove, changeQuantity, reset}

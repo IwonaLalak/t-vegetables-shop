@@ -26,6 +26,8 @@ const basketReducer = (state = INITIAL, action) => {
             }
             return {arr}
         }
+        case types.RESET_BASKET:
+            return {arr:[]};
         default:
             return state;
     }

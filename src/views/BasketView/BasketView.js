@@ -4,9 +4,9 @@ import Stepper from "../../shared/Stepper/Stepper";
 import CheckProductsStage from "./components/stages/CheckProductsStage";
 import FillOrderFormStage from "./components/stages/FillOrderFormStage";
 import MakePaymentStage from "./components/stages/MakePaymentStage";
-import {changeQuantity, removeFromBasket} from "../../redux_storage/basket/operations";
+import {changeQuantity, removeFromBasket, resetBasket} from "../../redux_storage/basket/operations";
 import {orderModel} from "../../_consts/models/models";
-import {setOrder} from "../../redux_storage/order/operations";
+import {resetOrder, setOrder} from "../../redux_storage/order/operations";
 import {confirmedDataStatuses} from "../../_consts/constvalues/constoptions";
 
 class BasketView extends React.Component {
@@ -81,6 +81,14 @@ class BasketView extends React.Component {
 
     handleClearStore = () => {
 
+        Promise.all(
+            [
+                this.props.resetBasket(),
+                this.props.resetOrder()
+            ]
+        ).then(() => {
+            setTimeout(()=>this.props.history.push('/'),3000);
+        })
     };
 
     render() {
@@ -137,7 +145,9 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = dispatch => ({
     removeFromBasket: id => dispatch(removeFromBasket(id)),
     changeQuantity: (id, quantity) => dispatch(changeQuantity(id, quantity)),
-    setOrder: item => dispatch(setOrder(item))
+    setOrder: item => dispatch(setOrder(item)),
+    resetBasket: () => dispatch(resetBasket()),
+    resetOrder: () => dispatch(resetOrder())
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(BasketView)
