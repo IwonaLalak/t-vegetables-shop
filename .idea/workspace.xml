@@ -2,18 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f2dcb656-23ba-4ecb-aa56-370cb7af6755" name="Default" comment="hocs with handle cases">
+      <change afterPath="$PROJECT_DIR$/src/views/LoginView/LoginView.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/__styles/_imports.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/__styles/_imports.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/__styles/_variables.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/__styles/_variables.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/__styles/components/BasketView.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/__styles/components/BasketView.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/__styles/components/BasketView.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/__styles/components/BasketView.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/__styles/components/FooterComponent.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/__styles/components/FooterComponent.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/__styles/components/FooterComponent.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/__styles/components/FooterComponent.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/__styles/components/HeaderComponent.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/__styles/components/HeaderComponent.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/__styles/components/HeaderComponent.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/__styles/components/HeaderComponent.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/__styles/components/buttons.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/__styles/components/buttons.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/shared/hoc/withNoOrder.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/shared/hoc/withNoOrder.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/shared/hoc/withNoProducts.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/shared/hoc/withNoProducts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_utilities/icons/FontAwesome.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/_utilities/icons/FontAwesome.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/shared/LayoutComponents/HeaderComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/shared/LayoutComponents/HeaderComponent.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,25 +35,26 @@
   </component>
   <component name="PropertiesComponent">
     <property name="HbShouldOpenHtmlAsHb" value="" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/shared/Forms" />
-    <property name="nodejs_interpreter_path" value="/usr/bin/node" />
+    <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/shared/Forms" />
+      <recent name="$PROJECT_DIR$/src/views/ManageView" />
+      <recent name="$PROJECT_DIR$/src/views/HomeView" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/shared/Stepper" />
       <recent name="$PROJECT_DIR$/src/views/HomeView/components/grid" />
       <recent name="$PROJECT_DIR$/src/redux_storage/products" />
       <recent name="$PROJECT_DIR$/src/_consts" />
       <recent name="$PROJECT_DIR$/src/views/ManageView/components/table" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/shared/Forms" />
-      <recent name="$PROJECT_DIR$/src/views/ManageView" />
-      <recent name="$PROJECT_DIR$/src/views/HomeView" />
     </key>
   </component>
   <component name="ServiceViewManager">
@@ -118,6 +113,7 @@
       <workItem from="1580903176060" duration="10670000" />
       <workItem from="1580975008647" duration="15653000" />
       <workItem from="1581060451265" duration="14320000" />
+      <workItem from="1581322446326" duration="418000" />
     </task>
     <task id="LOCAL-00001" summary="wrapper, footer">
       <created>1579528309136</created>

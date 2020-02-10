@@ -1,6 +1,6 @@
 import React from 'react';
 import {Nav, Navbar, Container, Row, Col, Badge} from "react-bootstrap";
-import {Basket, Home, Panel} from "../../_utilities/icons/FontAwesome";
+import {Basket, Home, Panel, User} from "../../_utilities/icons/FontAwesome";
 import {Link} from "react-router-dom";
 import {connect} from "react-redux";
 
@@ -27,6 +27,11 @@ const HeaderComponent = ({basket}) => {
                                     <Nav.Link>
                                         <Link to={'/basket'}>
                                             <Basket/> Basket <Badge variant={'secondary'}>{basket.length}</Badge></Link>
+                                    </Nav.Link>
+                                    <Nav.Link>
+                                        <Link to={'/login'}>
+                                            <User/> Login
+                                        </Link>
                                     </Nav.Link>
                                     <Nav.Link>
                                         <Link to={'/manage'}>

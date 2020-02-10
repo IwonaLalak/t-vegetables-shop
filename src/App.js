@@ -7,6 +7,7 @@ import HomeView from "./views/HomeView/HomeView";
 import BasketView from "./views/BasketView/BasketView";
 import ManageView from "./views/ManageView/ManageView";
 import {BrowserRouter as Router, Redirect, Route, Switch} from "react-router-dom";
+import LoginView from "./views/LoginView/LoginView";
 
 class App extends Component {
 
@@ -24,6 +25,7 @@ class App extends Component {
                     <WrapperComponent>
                         <Switch>
                             <Route exact path={'/'} render={(props) => <HomeView {...props} />}/>
+                            <Route exact path={'/login'} render={(props) => <LoginView {...props} />}/>
                             <Route exact path={'/basket'} render={(props) => <BasketView {...props} />}/>
                             <Route exact path={'/manage'} render={(props) => <ManageView {...props} />}/>
                             <Redirect to={'/'}/>

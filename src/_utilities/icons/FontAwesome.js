@@ -1,6 +1,7 @@
 import * as React from "react";
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {
+    faUser,
     faShoppingBasket,
     faCheck,
     faCartPlus,
@@ -24,6 +25,9 @@ import {
 
 export const Spin = () => {
     return <FontAwesomeIcon icon={faBahai} spin={true}/>
+};
+export const User = () => {
+    return <FontAwesomeIcon icon={faUser}/>
 };
 export const Money = () => {
     return <FontAwesomeIcon icon={faMoneyBillWave}/>
